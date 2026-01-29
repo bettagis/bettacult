@@ -2,17 +2,13 @@
 """
 unified_events.py
 
-Semplice scraper che prova a estrarre eventi da pagine che espongono JSON-LD (schema.org/Event)
-e salva:
-  - events.json  (formato JSON con lista di eventi normalizzati)
-  - events.ics   (file iCalendar generato dai medesimi eventi)
+Estende l'estrazione aggiungendo fallback site-specific per:
+ - teatrodiroma.net/calendario/
+ - auditorium.com/it/eventi/
+ - casadeljazz.com/eventi/
 
-Uso:
-  python scraper/unified_events.py URL [URL ...]
-  python scraper/unified_events.py --urls-file urls.txt
-  python scraper/unified_events.py https://example.com/evento -j site/events.json -c site/events.ics
+Nota: è una soluzione heuristic / best-effort per pagine senza JSON-LD.
 """
-
 from __future__ import annotations
 import argparse
 import json
@@ -24,9 +20,13 @@ from dateutil import parser as dateparser
 from datetime import datetime
 import uuid
 from icalendar import Calendar, Event as ICalEvent
+import re
+from urllib.parse import urljoin, urlparse
+
+USER_AGENT = "rome-events-bot/1.0"
 
 def fetch_html(url: str, timeout: int = 15) -> str:
-    resp = requests.get(url, timeout=timeout, headers={"User-Agent": "rome-events-bot/1.0"})
+    resp = requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
     resp.raise_for_status()
     return resp.text
 
@@ -62,7 +62,7 @@ def parse_date_to_dt(v: Any) -> Optional[datetime]:
     if not v:
         return None
     try:
-        dt = dateparser.parse(v)
+        dt = dateparser.parse(v, dayfirst=True)
         return dt
     except Exception:
         return None
@@ -73,7 +73,6 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     end_dt = parse_date_to_dt(raw.get("endDate") or raw.get("end"))
     description = raw.get("description") or ""
     url = raw.get("url") or raw.get("sameAs") or raw.get("mainEntityOfPage") or raw.get("@id") or source_url
-
     location_raw = raw.get("location") or {}
     if isinstance(location_raw, str):
         location = {"name": location_raw, "address": None}
@@ -93,10 +92,8 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
             elif isinstance(address, str):
                 loc_address = address
         location = {"name": loc_name, "address": loc_address}
-
     uid_source = f"{source_url}|{title}|{start_dt.isoformat() if start_dt else ''}"
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, uid_source))
-
     return {
         "id": uid,
         "title": title,
@@ -111,20 +108,194 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "raw": raw
     }
 
+def parse_iso_dates_from_text(text: str) -> List[datetime]:
+    # tenta estrarre date dall'intero testo con dateparser: cerca pattern comuni
+    dates: List[datetime] = []
+    # regex per date in varie forme (semplice heuristic)
+    patterns = [
+        r"\d{1,2}\s+[A-Za-zàèéìòù]{3,}\s+\d{4}",  # 12 Marzo 2026
+        r"\d{4}-\d{2}-\d{2}",                     # 2026-03-12
+        r"\d{1,2}/\d{1,2}/\d{2,4}",               # 12/03/2026
+    ]
+    for pat in patterns:
+        for m in re.finditer(pat, text):
+            dt = parse_date_to_dt(m.group(0))
+            if dt:
+                dates.append(dt)
+    return dates
+
+def is_same_domain(a: str, b: str) -> bool:
+    return urlparse(a).netloc == urlparse(b).netloc
+
+# --- Site specific parsers (fallbacks) ---
+def parse_teatrodiroma(html: str, base_url: str) -> List[Dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    events: List[Dict[str, Any]] = []
+    # Cerca link a pagine evento: href che contiene '/evento' o '/eventi' o '/scheda-evento'
+    candidates = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if any(k in href.lower() for k in ("/evento", "/eventi/", "/scheda-evento", "/evento/")):
+            full = urljoin(base_url, href)
+            candidates.append((full, a.get_text(strip=True)))
+    candidates = list(dict.fromkeys(candidates))  # dedup preservando ordine
+    for url, text in candidates[:60]:
+        try:
+            detail = fetch_html(url)
+        except Exception as e:
+            print(f"[WARN] teatro detail fetch failed {url}: {e}", file=sys.stderr)
+            continue
+        # prima prova estrazione JSON-LD sulla pagina di dettaglio
+        raw_events = extract_jsonld_events(detail)
+        if raw_events:
+            for re in raw_events:
+                events.append(normalize_event(re, url))
+            continue
+        # fallback: estrai titolo + date da testo
+        dt_candidates = parse_iso_dates_from_text(BeautifulSoup(detail, "html.parser").get_text(" ", strip=True))
+        title = text or BeautifulSoup(detail, "html.parser").find(["h1","h2","h3"]).get_text(strip=True if BeautifulSoup(detail, "html.parser").find(["h1","h2","h3"]) else None) if text else ""
+        raw = {"name": title, "description": ""}
+        if dt_candidates:
+            raw["startDate"] = dt_candidates[0].isoformat()
+            if len(dt_candidates) > 1:
+                raw["endDate"] = dt_candidates[1].isoformat()
+        raw["url"] = url
+        events.append(normalize_event(raw, url))
+    return events
+
+def parse_auditorium(html: str, base_url: str) -> List[Dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    events: List[Dict[str, Any]] = []
+    # Auditorium site spesso ha article, div con class 'card' o link che contengono '/evento/' o '/eventi/'
+    candidates = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if any(k in href.lower() for k in ("/evento/", "/eventi/", "/event/")):
+            candidates.append(urljoin(base_url, href))
+    candidates = list(dict.fromkeys(candidates))
+    for url in candidates[:80]:
+        try:
+            detail = fetch_html(url)
+        except Exception as e:
+            print(f"[WARN] auditorium detail fetch failed {url}: {e}", file=sys.stderr)
+            continue
+        raw_events = extract_jsonld_events(detail)
+        if raw_events:
+            for re in raw_events:
+                events.append(normalize_event(re, url))
+            continue
+        text = BeautifulSoup(detail, "html.parser").get_text(" ", strip=True)
+        dts = parse_iso_dates_from_text(text)
+        title = BeautifulSoup(detail, "html.parser").find(["h1","h2"])
+        t = title.get_text(strip=True) if title else ""
+        raw = {"name": t or "", "description": ""}
+        if dts:
+            raw["startDate"] = dts[0].isoformat()
+            if len(dts) > 1:
+                raw["endDate"] = dts[1].isoformat()
+        raw["url"] = url
+        events.append(normalize_event(raw, url))
+    return events
+
+def parse_casadeljazz(html: str, base_url: str) -> List[Dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    events: List[Dict[str, Any]] = []
+    # Cerca card/evento link; spesso href contiene '/eventi/' o '/evento/'
+    candidates = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if any(k in href.lower() for k in ("/eventi/", "/evento/", "/events/")):
+            candidates.append((urljoin(base_url, href), a.get_text(strip=True)))
+    candidates = list(dict.fromkeys(candidates))
+    for url, text in candidates[:60]:
+        try:
+            detail = fetch_html(url)
+        except Exception as e:
+            print(f"[WARN] casadeljazz detail fetch failed {url}: {e}", file=sys.stderr)
+            continue
+        raw_events = extract_jsonld_events(detail)
+        if raw_events:
+            for re in raw_events:
+                events.append(normalize_event(re, url))
+            continue
+        soupd = BeautifulSoup(detail, "html.parser")
+        text_all = soupd.get_text(" ", strip=True)
+        dts = parse_iso_dates_from_text(text_all)
+        ttag = soupd.find(["h1","h2"])
+        t = ttag.get_text(strip=True) if ttag else text
+        raw = {"name": t or "", "description": ""}
+        if dts:
+            raw["startDate"] = dts[0].isoformat()
+            if len(dts) > 1:
+                raw["endDate"] = dts[1].isoformat()
+        raw["url"] = url
+        events.append(normalize_event(raw, url))
+    return events
+
+# --- Main collector with fallback ---
 def collect_from_urls(urls: List[str]) -> List[Dict[str, Any]]:
     all_events: List[Dict[str, Any]] = []
     for url in urls:
+        print(f"[INFO] processing {url}", file=sys.stderr)
         try:
             html = fetch_html(url)
         except Exception as e:
             print(f"[WARN] failed to fetch {url}: {e}", file=sys.stderr)
             continue
         raw_events = extract_jsonld_events(html)
-        if not raw_events:
-            print(f"[INFO] no JSON-LD events found on {url}", file=sys.stderr)
-        for re in raw_events:
-            ev = normalize_event(re, url)
-            all_events.append(ev)
+        if raw_events:
+            print(f"[INFO] found {len(raw_events)} JSON-LD events on {url}", file=sys.stderr)
+            for re in raw_events:
+                ev = normalize_event(re, url)
+                ev["source"] = url
+                all_events.append(ev)
+            continue
+        # fallback site-specific heuristics
+        parsed = []
+        hostname = urlparse(url).netloc.lower()
+        if "teatrodiroma" in hostname:
+            parsed = parse_teatrodiroma(html, url)
+        elif "auditorium" in hostname:
+            parsed = parse_auditorium(html, url)
+        elif "casadeljazz" in hostname or "casajazz" in hostname:
+            parsed = parse_casadeljazz(html, url)
+        else:
+            # generic fallback: cerca link contenenti 'event' e prova i dettagli
+            soup = BeautifulSoup(html, "html.parser")
+            links = []
+            for a in soup.find_all("a", href=True):
+                if "event" in a["href"].lower() or "evento" in a["href"].lower():
+                    links.append(urljoin(url, a["href"]))
+            links = list(dict.fromkeys(links))
+            for l in links[:80]:
+                try:
+                    det = fetch_html(l)
+                except Exception as e:
+                    print(f"[WARN] generic detail fetch failed {l}: {e}", file=sys.stderr)
+                    continue
+                revents = extract_jsonld_events(det)
+                if revents:
+                    for re in revents:
+                        parsed.append(normalize_event(re, l))
+                else:
+                    text = BeautifulSoup(det, "html.parser").get_text(" ", strip=True)
+                    dts = parse_iso_dates_from_text(text)
+                    title_tag = BeautifulSoup(det, "html.parser").find(["h1","h2","h3"])
+                    title = title_tag.get_text(strip=True) if title_tag else ""
+                    raw = {"name": title, "description": ""}
+                    if dts:
+                        raw["startDate"] = dts[0].isoformat()
+                        if len(dts) > 1:
+                            raw["endDate"] = dts[1].isoformat()
+                    raw["url"] = l
+                    parsed.append(normalize_event(raw, l))
+        if parsed:
+            print(f"[INFO] parsed {len(parsed)} events via fallback on {url}", file=sys.stderr)
+            for e in parsed:
+                e["source"] = url
+                all_events.append(e)
+        else:
+            print(f"[INFO] no JSON-LD events and no fallback events found on {url}", file=sys.stderr)
     return all_events
 
 def save_json(events: List[Dict[str, Any]], outpath: str) -> None:
@@ -141,7 +312,6 @@ def save_ics(events: List[Dict[str, Any]], outpath: str) -> None:
     cal.add("prodid", "-//rome-events-calendar//example//IT")
     cal.add("version", "2.0")
     now = datetime.utcnow()
-
     added = 0
     for e in events:
         dtstart = e.get("start_dt")
@@ -168,7 +338,6 @@ def save_ics(events: List[Dict[str, Any]], outpath: str) -> None:
             ve.add("location", ", ".join(p for p in (loc_name, loc_addr) if p))
         cal.add_component(ve)
         added += 1
-
     with open(outpath, "wb") as f:
         f.write(cal.to_ical())
     print(f"[OK] saved {added} events to {outpath} (ICS)")
@@ -199,13 +368,12 @@ def main(argv: List[str]) -> int:
     if not urls:
         print("[ERROR] nessuna URL fornita (passa URL come argomenti o usa --urls-file)", file=sys.stderr)
         return 1
-
     events = collect_from_urls(urls)
+    # dedup by id
     dedup: Dict[str, Dict[str, Any]] = {}
     for e in events:
         dedup[e["id"]] = e
     events_unique = list(dedup.values())
-
     save_json(events_unique, args.output_json)
     save_ics(events_unique, args.output_ics)
     return 0
