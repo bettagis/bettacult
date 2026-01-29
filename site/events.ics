@@ -2,21 +2,155 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//rome-events-calendar//example//IT
 BEGIN:VEVENT
-SUMMARY:LOOKING FOR A PAST EVENT?
-DTSTART:20260129T000000
-DTEND:20260130T000000
-DTSTAMP:20260129T081700Z
-UID:76d5b4c3-5d05-50df-82f8-bff48671814d
-DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
- .auditorium.com/en/event/
+SUMMARY:Teatro India Archives - Teatro di Roma
+DTSTART:20250510T000000
+DTEND:20251210T000000
+DTSTAMP:20260129T083539Z
+UID:4f02ee71-ea05-5f26-9b9c-af0790750077
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-india/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Main Navigation
-DTSTART:20260130T000000
-DTEND:20260131T000000
-DTSTAMP:20260129T081700Z
-UID:a16be977-688c-5acb-8325-e4c5246bf73e
+SUMMARY:Teatro Torlonia Archives - Teatro di Roma
+DTSTART:20250510T000000
+DTEND:20251210T000000
+DTSTAMP:20260129T083539Z
+UID:483c4798-350d-5cd4-8b1f-43ea4c555110
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: http://w
+ ww.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Formazione - Teatro di Roma
+DTSTART:20260403T000000
+DTEND:20260104T000000
+DTSTAMP:20260129T083539Z
+UID:4657c157-98cf-5374-92fa-dbed5eaeec65
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/progetti/formazione/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro Ragazzi - Teatro di Roma
+DTSTART:20260803T000000
+DTEND:20260803T000000
+DTSTAMP:20260129T083539Z
+UID:49497b57-aea8-5469-a216-aed311d6f949
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/progetti/teatro-ragazzi/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Comunicati Stampa - Teatro di Roma
+DTSTART:20240508T000000
+DTEND:20240508T000000
+DTSTAMP:20260129T083539Z
+UID:2c52cd3d-04fd-5a90-886a-660827f0a347
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/comunicazione/comunicati-stampa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Un cuore greco - Teatro di Roma
+DTSTART:20260602T000000
+DTEND:20260602T000000
+DTSTAMP:20260129T083539Z
+UID:92bb0460-1158-5eec-9256-bbb2fb51679a
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/progetti/attivita-culturali/un-cuore-greco-il-ritorno
+ -ai-classici-nel-novecento/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Casanova ½ - Teatro di Roma
+DTSTART:20270201T000000
+DTEND:20280201T000000
+DTSTAMP:20260129T083539Z
+UID:788c5bf4-2c2f-55d9-86da-e157981d7180
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia/casanov
+ a-%c2%bd/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro India Archives - Teatro di Roma
+DTSTART:20250510T000000
+DTEND:20251210T000000
+DTSTAMP:20260129T083539Z
+UID:677f6592-1653-5d15-b8d7-65c5d24fd519
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-india
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro Torlonia Archives - Teatro di Roma
+DTSTART:20250510T000000
+DTEND:20251210T000000
+DTSTAMP:20260129T083539Z
+UID:df8960b9-a448-5153-8619-eb1e774a7149
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Anna Foa & Giovanni Grasso – Articolo 48 | Auditorium Parco dell
+ a Musica Ennio Morricone
+DTSTART:20260102T000000
+DTEND:20260102T170000
+DTSTAMP:20260129T083539Z
+UID:41d8984f-3373-50a4-8fd6-f444682bab93
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
+ .auditorium.com/it/event/dialoghi-sulla-costituzione-anna-foa-e-giovanni-g
+ rasso/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sergio Rubini - Gli occhiali di Šostakovič | Auditorium Parco de
+ lla Musica Ennio Morricone
+DTSTART:20260202T000000
+DTEND:20260202T200000
+DTSTAMP:20260129T083539Z
+UID:6ab5e054-b365-5b06-9ee1-af8f29e58712
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
+ .auditorium.com/it/event/gli-occhiali-di-sostakovic/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Ceci
+ lia
+DTSTART:20270502T000000
+DTSTAMP:20260129T083539Z
+UID:236c5e31-f603-5a89-8718-0484ec9c4efa
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://san
+ tacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1481
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tommy Emmanuel | Auditorium Parco della Musica Ennio Morricone
+DTSTART:20260602T000000
+DTEND:20260602T210000
+DTSTAMP:20260129T083539Z
+UID:0d7acba6-2cf6-5235-8dea-55fed6504814
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
+ .auditorium.com/it/event/tommy-emmanuel/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eventi | Auditorium Parco della Musica Ennio Morricone
+DTSTART:20260602T000000
+DTEND:20260602T200000
+DTSTAMP:20260129T083539Z
+UID:fb13c226-8283-5c10-83c0-6cbb00b9dd7c
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
+ .auditorium.com/it/eventi/page/2/?gad_source=1&gad_campaignid=22840469467&
+ gbraid=0AAAAAokx0LiKVgUCgzZ_SApvcqJiOnk0t&gclid=EAIaIQobChMIu4WK65awkgMViq
+ uDBx1HoS1CEAAYASABEgI3B_D_BwE#038\;gad_campaignid=22840469467&gbraid=0AAAA
+ Aokx0LiKVgUCgzZ_SApvcqJiOnk0t&gclid=EAIaIQobChMIu4WK65awkgMViquDBx1HoS1CEA
+ AYASABEgI3B_D_BwE
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Natale Auditorium | Auditorium Parco della Musica Ennio Morricone
+DTSTART:20260412T000000
+DTEND:20270601T000000
+DTSTAMP:20260129T083539Z
+UID:f573cae8-e01c-57c1-a8ae-f45fcb3251b3
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
+ .auditorium.com/it/festival/natale-auditorium-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ENRICO PIERANUNZI “Youth Trio”
+DTSTART:20260103T180000
+DTSTAMP:20260129T083539Z
+UID:72e0c2b4-eddb-5ad9-9416-cf2d0dd236f4
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
- asadeljazz.com/en/events/
+ asadeljazz.com/evento/enrico-pieranunzi-youth-trio/
 END:VEVENT
 END:VCALENDAR
