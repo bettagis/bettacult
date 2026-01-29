@@ -2,21 +2,21 @@
 """
 unified_events.py
 
-Estende l'estrazione aggiungendo fallback site-specific per:
- - teatrodiroma.net/calendario/
- - auditorium.com/it/eventi/
- - casadeljazz.com/eventi/
-
-Nota: è una soluzione heuristic / best-effort per pagine senza JSON-LD.
+Estende l'estrazione aggiungendo miglioramenti:
+ - filtro più accurato dei link (evita link di navigazione)
+ - estrazione titolo più robusta (meta og:title, <title>, h1/h2, selettori 'title')
+ - parsing date con dateparser (supporto italiano)
+ - pattern più larghi per teatrodiroma
 """
 from __future__ import annotations
 import argparse
 import json
 import sys
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 import requests
 from bs4 import BeautifulSoup
-from dateutil import parser as dateparser
+import dateparser
+from dateparser.search import search_dates
 from datetime import datetime
 import uuid
 from icalendar import Calendar, Event as ICalEvent
@@ -24,6 +24,11 @@ import re
 from urllib.parse import urljoin, urlparse
 
 USER_AGENT = "rome-events-bot/1.0"
+
+NAV_TEXT_BLACKLIST = {
+    "navigazione principale", "cerca", "cerca un evento", "eventi passati",
+    "vedi tutti", "carica altro", "leggi di più", "home", "contatti", "programma"
+}
 
 def fetch_html(url: str, timeout: int = 15) -> str:
     resp = requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
@@ -62,10 +67,37 @@ def parse_date_to_dt(v: Any) -> Optional[datetime]:
     if not v:
         return None
     try:
-        dt = dateparser.parse(v, dayfirst=True)
+        # dateparser gestisce bene le date in italiano
+        if isinstance(v, datetime):
+            return v
+        dt = dateparser.parse(str(v), languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
         return dt
     except Exception:
         return None
+
+def find_dates_in_text(text: str) -> List[datetime]:
+    # usa dateparser.search.search_dates per trovare date nel testo (lingua italiana)
+    try:
+        found = search_dates(text, languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
+        if not found:
+            return []
+        # search_dates returns list of (matched_text, datetime)
+        dts = [t for (_, t) in found]
+        return dts
+    except Exception:
+        # fallback: regex lookups basilari
+        patterns = [
+            r"\d{1,2}\s+[A-Za-zàèéìòù]{3,}\s+\d{4}",  # 12 Marzo 2026
+            r"\d{4}-\d{2}-\d{2}",
+            r"\d{1,2}/\d{1,2}/\d{2,4}",
+        ]
+        dates = []
+        for pat in patterns:
+            for m in re.finditer(pat, text, flags=re.IGNORECASE):
+                dt = parse_date_to_dt(m.group(0))
+                if dt:
+                    dates.append(dt)
+        return dates
 
 def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     title = raw.get("name") or raw.get("headline") or ""
@@ -108,57 +140,105 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "raw": raw
     }
 
-def parse_iso_dates_from_text(text: str) -> List[datetime]:
-    # tenta estrarre date dall'intero testo con dateparser: cerca pattern comuni
-    dates: List[datetime] = []
-    # regex per date in varie forme (semplice heuristic)
-    patterns = [
-        r"\d{1,2}\s+[A-Za-zàèéìòù]{3,}\s+\d{4}",  # 12 Marzo 2026
-        r"\d{4}-\d{2}-\d{2}",                     # 2026-03-12
-        r"\d{1,2}/\d{1,2}/\d{2,4}",               # 12/03/2026
-    ]
-    for pat in patterns:
-        for m in re.finditer(pat, text):
-            dt = parse_date_to_dt(m.group(0))
-            if dt:
-                dates.append(dt)
-    return dates
+def is_nav_text(text: str) -> bool:
+    if not text:
+        return False
+    t = text.strip().lower()
+    # too short or blacklisted
+    if len(t) < 3:
+        return True
+    for bad in NAV_TEXT_BLACKLIST:
+        if bad in t:
+            return True
+    return False
 
-def is_same_domain(a: str, b: str) -> bool:
-    return urlparse(a).netloc == urlparse(b).netloc
+def sensible_event_href(base: str, href: str) -> bool:
+    # scarta link esterni o link generici della stessa base senza slug utile
+    if not href:
+        return False
+    full = urljoin(base, href)
+    p = urlparse(full).path
+    # scarta link troppo generici (es. /it/event/ senza slug)
+    segs = [s for s in p.split("/") if s]
+    if len(segs) <= 1:
+        return False
+    # preferisci percorsi che contengano 'event' o 'evento' o che abbiano sufficiente profondità
+    if any(k in p.lower() for k in ("/event/", "/evento", "/eventi/", "/events/")):
+        # escludi query o anchor che rimandano a filtri di navigazione
+        return True
+    # fallback: accetta se path ha almeno 2 segmenti (molti siti usano /anno/mese/slug)
+    return len(segs) >= 2
 
-# --- Site specific parsers (fallbacks) ---
+def get_title_from_detail(soup: BeautifulSoup, fallback_text: Optional[str]) -> str:
+    # priorità: meta og:title, meta name=title, <title>, h1/h2, elementi con class 'title' o 'entry-title', fallback_text
+    og = soup.find("meta", property="og:title")
+    if og and og.get("content"):
+        t = og["content"].strip()
+        if t and not is_nav_text(t):
+            return t
+    nm = soup.find("meta", attrs={"name": "title"})
+    if nm and nm.get("content"):
+        t = nm["content"].strip()
+        if t and not is_nav_text(t):
+            return t
+    head_title = soup.find("title")
+    if head_title and head_title.get_text(strip=True):
+        t = head_title.get_text(strip=True)
+        if t and not is_nav_text(t):
+            return t
+    for tag in ("h1","h2"):
+        el = soup.find(tag)
+        if el and el.get_text(strip=True):
+            t = el.get_text(strip=True)
+            if t and not is_nav_text(t):
+                return t
+    # cerca elementi con class che contiene 'title' o 'titolo' o 'entry-title'
+    el = soup.select_one("[class*='title'], [class*='titolo'], .entry-title")
+    if el and el.get_text(strip=True):
+        t = el.get_text(strip=True)
+        if t and not is_nav_text(t):
+            return t
+    # fallback al testo di ancoraggio se non è navigazione
+    if fallback_text and not is_nav_text(fallback_text):
+        return fallback_text.strip()
+    return ""
+
+# --- site-specific parsers ---
 def parse_teatrodiroma(html: str, base_url: str) -> List[Dict[str, Any]]:
     soup = BeautifulSoup(html, "html.parser")
     events: List[Dict[str, Any]] = []
-    # Cerca link a pagine evento: href che contiene '/evento' o '/eventi' o '/scheda-evento'
     candidates = []
+    # cerca link che sembrano eventi e bottoni/elementi con class 'evento' o 'calendar'
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        if any(k in href.lower() for k in ("/evento", "/eventi/", "/scheda-evento", "/evento/")):
-            full = urljoin(base_url, href)
-            candidates.append((full, a.get_text(strip=True)))
-    candidates = list(dict.fromkeys(candidates))  # dedup preservando ordine
-    for url, text in candidates[:60]:
+        if sensible_event_href(base_url, href) and not is_nav_text(a.get_text()):
+            candidates.append(urljoin(base_url, href))
+    # anche cerca elementi con class contenente 'evento' o 'card'
+    for card in soup.select("[class*='evento'], [class*='card'], [class*='calendar']"):
+        a = card.find("a", href=True)
+        if a and sensible_event_href(base_url, a["href"]) and not is_nav_text(a.get_text()):
+            candidates.append(urljoin(base_url, a["href"]))
+    candidates = list(dict.fromkeys(candidates))
+    for url in candidates[:120]:
         try:
             detail = fetch_html(url)
         except Exception as e:
             print(f"[WARN] teatro detail fetch failed {url}: {e}", file=sys.stderr)
             continue
-        # prima prova estrazione JSON-LD sulla pagina di dettaglio
         raw_events = extract_jsonld_events(detail)
         if raw_events:
             for re in raw_events:
                 events.append(normalize_event(re, url))
             continue
-        # fallback: estrai titolo + date da testo
-        dt_candidates = parse_iso_dates_from_text(BeautifulSoup(detail, "html.parser").get_text(" ", strip=True))
-        title = text or BeautifulSoup(detail, "html.parser").find(["h1","h2","h3"]).get_text(strip=True if BeautifulSoup(detail, "html.parser").find(["h1","h2","h3"]) else None) if text else ""
-        raw = {"name": title, "description": ""}
-        if dt_candidates:
-            raw["startDate"] = dt_candidates[0].isoformat()
-            if len(dt_candidates) > 1:
-                raw["endDate"] = dt_candidates[1].isoformat()
+        soupd = BeautifulSoup(detail, "html.parser")
+        title = get_title_from_detail(soupd, None)
+        text = soupd.get_text(" ", strip=True)
+        dts = find_dates_in_text(text)
+        raw = {"name": title or "", "description": ""}
+        if dts:
+            raw["startDate"] = dts[0].isoformat()
+            if len(dts) > 1:
+                raw["endDate"] = dts[1].isoformat()
         raw["url"] = url
         events.append(normalize_event(raw, url))
     return events
@@ -166,14 +246,23 @@ def parse_teatrodiroma(html: str, base_url: str) -> List[Dict[str, Any]]:
 def parse_auditorium(html: str, base_url: str) -> List[Dict[str, Any]]:
     soup = BeautifulSoup(html, "html.parser")
     events: List[Dict[str, Any]] = []
-    # Auditorium site spesso ha article, div con class 'card' o link che contengono '/evento/' o '/eventi/'
     candidates = []
+    # raccogli link che contengono '/it/event/' oppure '/event/' e che abbiano slug
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        if any(k in href.lower() for k in ("/evento/", "/eventi/", "/event/")):
-            candidates.append(urljoin(base_url, href))
+        full = urljoin(base_url, href)
+        if sensible_event_href(base_url, href):
+            # scarta anchor chiaramente di navigazione
+            text = (a.get_text() or "").strip()
+            if is_nav_text(text):
+                continue
+            # scarta la pagina generica /it/event/ senza slug
+            path = urlparse(full).path
+            if path.rstrip("/").lower().endswith("/it/event"):
+                continue
+            candidates.append(full)
     candidates = list(dict.fromkeys(candidates))
-    for url in candidates[:80]:
+    for url in candidates[:150]:
         try:
             detail = fetch_html(url)
         except Exception as e:
@@ -184,11 +273,11 @@ def parse_auditorium(html: str, base_url: str) -> List[Dict[str, Any]]:
             for re in raw_events:
                 events.append(normalize_event(re, url))
             continue
-        text = BeautifulSoup(detail, "html.parser").get_text(" ", strip=True)
-        dts = parse_iso_dates_from_text(text)
-        title = BeautifulSoup(detail, "html.parser").find(["h1","h2"])
-        t = title.get_text(strip=True) if title else ""
-        raw = {"name": t or "", "description": ""}
+        soupd = BeautifulSoup(detail, "html.parser")
+        title = get_title_from_detail(soupd, "")
+        text = soupd.get_text(" ", strip=True)
+        dts = find_dates_in_text(text)
+        raw = {"name": title or "", "description": ""}
         if dts:
             raw["startDate"] = dts[0].isoformat()
             if len(dts) > 1:
@@ -200,30 +289,29 @@ def parse_auditorium(html: str, base_url: str) -> List[Dict[str, Any]]:
 def parse_casadeljazz(html: str, base_url: str) -> List[Dict[str, Any]]:
     soup = BeautifulSoup(html, "html.parser")
     events: List[Dict[str, Any]] = []
-    # Cerca card/evento link; spesso href contiene '/eventi/' o '/evento/'
-    candidates = []
+    candidates: List[Tuple[str,str]] = []
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        if any(k in href.lower() for k in ("/eventi/", "/evento/", "/events/")):
-            candidates.append((urljoin(base_url, href), a.get_text(strip=True)))
+        text = (a.get_text() or "").strip()
+        if sensible_event_href(base_url, href) and not is_nav_text(text):
+            candidates.append((urljoin(base_url, href), text))
     candidates = list(dict.fromkeys(candidates))
-    for url, text in candidates[:60]:
+    for url, anchor_text in candidates[:120]:
         try:
             detail = fetch_html(url)
         except Exception as e:
             print(f"[WARN] casadeljazz detail fetch failed {url}: {e}", file=sys.stderr)
             continue
+        soupd = BeautifulSoup(detail, "html.parser")
         raw_events = extract_jsonld_events(detail)
         if raw_events:
             for re in raw_events:
                 events.append(normalize_event(re, url))
             continue
-        soupd = BeautifulSoup(detail, "html.parser")
-        text_all = soupd.get_text(" ", strip=True)
-        dts = parse_iso_dates_from_text(text_all)
-        ttag = soupd.find(["h1","h2"])
-        t = ttag.get_text(strip=True) if ttag else text
-        raw = {"name": t or "", "description": ""}
+        title = get_title_from_detail(soupd, anchor_text)
+        text = soupd.get_text(" ", strip=True)
+        dts = find_dates_in_text(text)
+        raw = {"name": title or "", "description": ""}
         if dts:
             raw["startDate"] = dts[0].isoformat()
             if len(dts) > 1:
@@ -250,7 +338,6 @@ def collect_from_urls(urls: List[str]) -> List[Dict[str, Any]]:
                 ev["source"] = url
                 all_events.append(ev)
             continue
-        # fallback site-specific heuristics
         parsed = []
         hostname = urlparse(url).netloc.lower()
         if "teatrodiroma" in hostname:
@@ -264,7 +351,7 @@ def collect_from_urls(urls: List[str]) -> List[Dict[str, Any]]:
             soup = BeautifulSoup(html, "html.parser")
             links = []
             for a in soup.find_all("a", href=True):
-                if "event" in a["href"].lower() or "evento" in a["href"].lower():
+                if sensible_event_href(url, a["href"]) and not is_nav_text(a.get_text()):
                     links.append(urljoin(url, a["href"]))
             links = list(dict.fromkeys(links))
             for l in links[:80]:
@@ -278,11 +365,11 @@ def collect_from_urls(urls: List[str]) -> List[Dict[str, Any]]:
                     for re in revents:
                         parsed.append(normalize_event(re, l))
                 else:
-                    text = BeautifulSoup(det, "html.parser").get_text(" ", strip=True)
-                    dts = parse_iso_dates_from_text(text)
-                    title_tag = BeautifulSoup(det, "html.parser").find(["h1","h2","h3"])
-                    title = title_tag.get_text(strip=True) if title_tag else ""
-                    raw = {"name": title, "description": ""}
+                    soupd = BeautifulSoup(det, "html.parser")
+                    title = get_title_from_detail(soupd, "")
+                    text = soupd.get_text(" ", strip=True)
+                    dts = find_dates_in_text(text)
+                    raw = {"name": title or "", "description": ""}
                     if dts:
                         raw["startDate"] = dts[0].isoformat()
                         if len(dts) > 1:
