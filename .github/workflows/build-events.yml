@@ -1,5 +1,8 @@
 name: Build unified events (daily)
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   schedule:
@@ -11,6 +14,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -26,10 +32,24 @@ jobs:
         run: |
           python scraper/unified_events.py --urls-file scraper/urls.txt -j site/events.json -c site/events.ics
 
-      - name: Commit updated artifacts
+      - name: Show git status (debug)
+        run: |
+          git status --porcelain
+          echo "---- diff begin ----"
+          git --no-pager diff --name-status || true
+          echo "---- diff end ----"
+
+      - name: Commit updated artifacts (only if changes)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add site/events.json site/events.ics
-          git commit -m "Update events" || echo "No changes"
-          git push
+          git add site/events.json site/events.ics || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore(events): update generated events"
+            # push usando token per l'autenticazione
+            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi
