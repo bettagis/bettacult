@@ -383,7 +383,11 @@ def collect_from_urls(urls: List[str]) -> List[Dict[str, Any]]:
                 all_events.append(e)
         else:
             print(f"[INFO] no JSON-LD events and no fallback events found on {url}", file=sys.stderr)
-    return all_events
+        # dopo aver popolato all_events:
+    print(f"[INFO] total raw events before post-filter: {len(all_events)}", file=sys.stderr)
+    filtered = post_filter_events(all_events)
+    print(f"[INFO] total events after post-filter: {len(filtered)}", file=sys.stderr)
+    return filtered
 
 def save_json(events: List[Dict[str, Any]], outpath: str) -> None:
     serializable = []
