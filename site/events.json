@@ -75,7 +75,7 @@
       "raw": {
         "name": "Collaborazioni - Teatro di Roma",
         "description": "",
-        "startDate": "2025-01-29T00:00:00",
+        "startDate": "2025-01-30T00:00:00",
         "endDate": "2025-02-01T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/collaborazioni/"
       }
@@ -95,8 +95,8 @@
       "raw": {
         "name": "Centro studi - Teatro di Roma",
         "description": "",
-        "startDate": "1994-01-29T00:00:00",
-        "endDate": "1994-01-29T00:00:00",
+        "startDate": "1994-01-30T00:00:00",
+        "endDate": "1994-01-30T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/centro-studi/"
       }
     },
@@ -315,29 +315,9 @@
       "raw": {
         "name": "Luce sull'archeologia 2026 - Teatro di Roma",
         "description": "",
-        "startDate": "2026-01-29T00:00:00",
-        "endDate": "2026-01-29T00:00:00",
+        "startDate": "2026-01-30T00:00:00",
+        "endDate": "2026-01-30T00:00:00",
         "url": "https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-sullarcheologia-2026/"
-      }
-    },
-    {
-      "id": "236c5e31-f603-5a89-8718-0484ec9c4efa",
-      "title": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
-      "start": "2027-05-02T00:00:00",
-      "end": null,
-      "description": "",
-      "location": {
-        "name": null,
-        "address": null
-      },
-      "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1481",
-      "source": "https://www.auditorium.com/it/eventi/",
-      "raw": {
-        "name": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
-        "description": "",
-        "startDate": "2027-02-05T00:00:00",
-        "endDate": "2027-04-30T20:00:00",
-        "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1481"
       }
     },
     {
@@ -355,7 +335,7 @@
       "raw": {
         "name": "Jazz Campus Orchestra",
         "description": "",
-        "startDate": "2040-01-29T09:59:40.774529",
+        "startDate": "2040-01-30T05:53:21.665376",
         "endDate": "2023-06-09T21:00:00",
         "url": "https://www.casadeljazz.com/orchestra-residente/jazz-campus-orchestra/"
       }
@@ -375,8 +355,8 @@
       "raw": {
         "name": "Upcoming events",
         "description": "",
-        "startDate": "2026-04-23T19:30:00",
-        "endDate": "2026-07-17T19:30:00",
+        "startDate": "2026-04-24T19:30:00",
+        "endDate": "2026-07-18T19:30:00",
         "url": "https://www.casadeljazz.com/en/events/"
       }
     },
@@ -395,7 +375,7 @@
       "raw": {
         "name": "Casa del Jazz",
         "description": "",
-        "startDate": "2026-01-29T00:00:00",
+        "startDate": "2026-01-30T00:00:00",
         "url": "https://www.youtube.com/user/casadeljazztube"
       }
     },
@@ -474,7 +454,7 @@
       "raw": {
         "name": "MASSIMILIANO CIGNITTI “Quella stanza segreta - Omaggio a Edda Dell’Orso”",
         "description": "",
-        "startDate": "2066-01-29T10:00:34.043690",
+        "startDate": "2066-01-30T05:54:15.296045",
         "endDate": "2026-02-01T18:00:00",
         "url": "https://www.casadeljazz.com/evento/massimiliano-cignitti-quella-stanza-segreta-omaggio-a-edda-dallorso/"
       }
@@ -494,8 +474,8 @@
       "raw": {
         "name": "PATRIZIA SCASCITELLI QUINTET",
         "description": "",
-        "startDate": "2077-01-29T00:00:00",
-        "endDate": "2077-01-29T00:00:00",
+        "startDate": "2077-01-30T00:00:00",
+        "endDate": "2077-01-30T00:00:00",
         "url": "https://www.casadeljazz.com/evento/patrizia-scascitelli/"
       }
     },
@@ -514,7 +494,7 @@
       "raw": {
         "name": "FRANCESCO FRATINI QUARTET",
         "description": "",
-        "startDate": "2026-01-29T00:00:00",
+        "startDate": "2026-01-30T00:00:00",
         "endDate": "2026-02-07T19:30:00",
         "url": "https://www.casadeljazz.com/evento/francesco-fratini-quartet/"
       }
@@ -534,8 +514,8 @@
       "raw": {
         "name": "SIMONE MAGGIO TRIO",
         "description": "",
-        "startDate": "2026-05-29T00:00:00",
-        "endDate": "2027-05-29T00:00:00",
+        "startDate": "2026-05-30T00:00:00",
+        "endDate": "2027-05-30T00:00:00",
         "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/"
       }
     },
@@ -554,8 +534,8 @@
       "raw": {
         "name": "GABRIEL MARCIANO QUARTET",
         "description": "",
-        "startDate": "2020-01-29T00:00:00",
-        "endDate": "2025-01-29T00:00:00",
+        "startDate": "2020-01-30T00:00:00",
+        "endDate": "2025-01-30T00:00:00",
         "url": "https://www.casadeljazz.com/evento/gabriel-marciano-quartet-3/"
       }
     },
@@ -574,7 +554,7 @@
       "raw": {
         "name": "ANDREA MOLINARI “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-01-29T10:02:44.208669",
+        "startDate": "2026-01-30T05:56:25.425247",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
@@ -594,7 +574,7 @@
       "raw": {
         "name": "ETTORE CARUCCI",
         "description": "",
-        "startDate": "2026-10-29T00:00:00",
+        "startDate": "2026-10-30T00:00:00",
         "endDate": "2026-02-15T18:00:00",
         "url": "https://www.casadeljazz.com/evento/ettore-carucci/"
       }
@@ -614,8 +594,8 @@
       "raw": {
         "name": "CRISTIANO CELLI",
         "description": "",
-        "startDate": "2023-01-29T00:00:00",
-        "endDate": "2024-01-29T00:00:00",
+        "startDate": "2023-01-30T00:00:00",
+        "endDate": "2024-01-30T00:00:00",
         "url": "https://www.casadeljazz.com/evento/cristiano-celli/"
       }
     },
@@ -634,8 +614,8 @@
       "raw": {
         "name": "NO TRIO FOR CATS",
         "description": "",
-        "startDate": "2025-01-29T00:00:00",
-        "endDate": "2012-01-29T00:00:00",
+        "startDate": "2025-01-30T00:00:00",
+        "endDate": "2012-01-30T00:00:00",
         "url": "https://www.casadeljazz.com/evento/no-trio-for-cats/"
       }
     },
@@ -654,7 +634,7 @@
       "raw": {
         "name": "ENRICO ZANISI",
         "description": "",
-        "startDate": "2016-01-29T00:00:00",
+        "startDate": "2016-01-30T00:00:00",
         "endDate": "2026-02-22T18:00:00",
         "url": "https://www.casadeljazz.com/evento/enrico-zanisi-2/"
       }
@@ -694,7 +674,7 @@
       "raw": {
         "name": "ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”",
         "description": "",
-        "startDate": "2026-01-29T00:00:00",
+        "startDate": "2026-01-30T00:00:00",
         "endDate": "2026-02-28T19:30:00",
         "url": "https://www.casadeljazz.com/evento/enrico-pieranunzi-simona-severini-canzoni-e-chansons/"
       }
@@ -734,8 +714,8 @@
       "raw": {
         "name": "Summertime 2026",
         "description": "",
-        "startDate": "2026-01-29T00:00:00",
-        "endDate": "2026-01-29T00:00:00",
+        "startDate": "2026-01-30T00:00:00",
+        "endDate": "2026-01-30T00:00:00",
         "url": "https://www.casadeljazz.com/rassegna/summertime-2026/"
       }
     }
