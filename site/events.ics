@@ -2,10 +2,19 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//rome-events-calendar//example//IT
 BEGIN:VEVENT
+SUMMARY:Attività culturali - Teatro di Roma
+DTSTART:20260702T000000
+DTEND:20260710T000000
+DTSTAMP:20260131T054935Z
+UID:b9013dcd-fecc-5135-9d37-af2afe339039
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/progetti/attivita-culturali/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Formazione - Teatro di Roma
 DTSTART:20260403T000000
 DTEND:20260104T000000
-DTSTAMP:20260130T055953Z
+DTSTAMP:20260131T054935Z
 UID:4657c157-98cf-5374-92fa-dbed5eaeec65
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/formazione/
@@ -14,7 +23,7 @@ BEGIN:VEVENT
 SUMMARY:Teatro Ragazzi - Teatro di Roma
 DTSTART:20260803T000000
 DTEND:20260803T000000
-DTSTAMP:20260130T055953Z
+DTSTAMP:20260131T054935Z
 UID:49497b57-aea8-5469-a216-aed311d6f949
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/teatro-ragazzi/
@@ -23,16 +32,25 @@ BEGIN:VEVENT
 SUMMARY:Un cuore greco - Teatro di Roma
 DTSTART:20260602T000000
 DTEND:20260602T000000
-DTSTAMP:20260130T055953Z
+DTSTAMP:20260131T054935Z
 UID:92bb0460-1158-5eec-9256-bbb2fb51679a
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/attivita-culturali/un-cuore-greco-il-ritorno
  -ai-classici-nel-novecento/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Ceci
+ lia
+DTSTART:20270502T000000
+DTSTAMP:20260131T054935Z
+UID:236c5e31-f603-5a89-8718-0484ec9c4efa
+DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://san
+ tacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1481
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ENRICO PIERANUNZI “Youth Trio”
 DTSTART:20260103T180000
-DTSTAMP:20260130T055953Z
+DTSTAMP:20260131T054935Z
 UID:72e0c2b4-eddb-5ad9-9416-cf2d0dd236f4
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/enrico-pieranunzi-youth-trio/
