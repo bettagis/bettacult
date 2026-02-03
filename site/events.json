@@ -1,10 +1,10 @@
 {
   "events": [
     {
-      "id": "d5670774-acd0-5fdc-8d97-4c9c7f284bad",
+      "id": "4ab9b472-33ba-59bc-8bc8-84cc8e16ae4f",
       "title": "Teatro Argentina: storia, curiosità e attualità",
-      "start": "1700-02-02T00:00:00",
-      "end": "1700-02-02T00:00:00",
+      "start": "1700-03-02T00:00:00",
+      "end": "1700-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -15,16 +15,16 @@
       "raw": {
         "name": "Teatro Argentina: storia, curiosità e attualità",
         "description": "",
-        "startDate": "1700-02-02T00:00:00",
-        "endDate": "1700-02-02T00:00:00",
+        "startDate": "1700-02-03T00:00:00",
+        "endDate": "1700-02-03T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-argentina/"
       }
     },
     {
-      "id": "e975ad3a-0ced-53b0-a82a-face3b6b43c4",
+      "id": "0bcad829-4e78-5a50-9c49-204c7aff8168",
       "title": "Teatro India: il teatro industriale",
-      "start": "1913-02-02T00:00:00",
-      "end": "1913-02-02T00:00:00",
+      "start": "1913-03-02T00:00:00",
+      "end": "1913-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -35,16 +35,16 @@
       "raw": {
         "name": "Teatro India: il teatro industriale",
         "description": "",
-        "startDate": "1913-02-02T00:00:00",
-        "endDate": "1913-02-02T00:00:00",
+        "startDate": "1913-02-03T00:00:00",
+        "endDate": "1913-02-03T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-india/"
       }
     },
     {
-      "id": "f9020c76-a504-5eb1-9eca-2d603b55871a",
+      "id": "d2746fc5-b6a8-5cad-a1c0-20626a7c8aac",
       "title": "Teatro Torlonia: la storia del teatro pegno di amore",
-      "start": "1841-02-02T00:00:00",
-      "end": "1848-02-02T00:00:00",
+      "start": "1841-03-02T00:00:00",
+      "end": "1848-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -55,8 +55,8 @@
       "raw": {
         "name": "Teatro Torlonia: la storia del teatro pegno di amore",
         "description": "",
-        "startDate": "1841-02-02T00:00:00",
-        "endDate": "1848-02-02T00:00:00",
+        "startDate": "1841-02-03T00:00:00",
+        "endDate": "1848-02-03T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-torlonia/"
       }
     },
@@ -121,9 +121,9 @@
       }
     },
     {
-      "id": "632e2231-5572-5e89-bf20-adcf57123f63",
+      "id": "3abfb660-0474-5c9d-afb1-3e24f7a5328c",
       "title": "Collaborazioni - Teatro di Roma",
-      "start": "2025-02-02T00:00:00",
+      "start": "2025-03-02T00:00:00",
       "end": "2025-08-02T00:00:00",
       "description": "",
       "location": {
@@ -135,16 +135,16 @@
       "raw": {
         "name": "Collaborazioni - Teatro di Roma",
         "description": "",
-        "startDate": "2025-02-02T00:00:00",
+        "startDate": "2025-02-03T00:00:00",
         "endDate": "2025-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/collaborazioni/"
       }
     },
     {
-      "id": "172bf341-598b-5b55-932d-daf41c871d8b",
+      "id": "eb88c971-5cc4-5b01-af09-a9eb359f7551",
       "title": "Centro studi - Teatro di Roma",
-      "start": "1994-02-02T00:00:00",
-      "end": "1994-02-02T00:00:00",
+      "start": "1994-03-02T00:00:00",
+      "end": "1994-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -155,8 +155,8 @@
       "raw": {
         "name": "Centro studi - Teatro di Roma",
         "description": "",
-        "startDate": "1994-02-02T00:00:00",
-        "endDate": "1994-02-02T00:00:00",
+        "startDate": "1994-02-03T00:00:00",
+        "endDate": "1994-02-03T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/centro-studi/"
       }
     },
@@ -181,9 +181,9 @@
       }
     },
     {
-      "id": "250abfe0-90db-5477-91dc-bed71880c8d7",
+      "id": "3faeb59c-0189-509d-96c7-200800c3292c",
       "title": "Teatro di Roma",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -195,7 +195,7 @@
       "raw": {
         "name": "Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "url": "https://www.youtube.com/user/teatrodiroma"
       }
     },
@@ -260,9 +260,9 @@
       }
     },
     {
-      "id": "799747a0-a69c-50f7-850e-4df8a19498fc",
+      "id": "441f95ee-b0dd-5bca-9ac2-8f7990bae302",
       "title": "Sarfatti - Teatro di Roma",
-      "start": "2027-02-02T00:00:00",
+      "start": "2027-03-02T00:00:00",
       "end": "2026-08-02T00:00:00",
       "description": "",
       "location": {
@@ -274,7 +274,7 @@
       "raw": {
         "name": "Sarfatti - Teatro di Roma",
         "description": "",
-        "startDate": "2027-02-02T00:00:00",
+        "startDate": "2027-02-03T00:00:00",
         "endDate": "2026-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia/sarfatti/"
       }
@@ -320,10 +320,10 @@
       }
     },
     {
-      "id": "ec52284f-1b41-5813-9437-5043f660a423",
+      "id": "4bd6a5db-7483-5b52-a418-f9be933d5738",
       "title": "Luce sull'archeologia 2026 - Teatro di Roma",
-      "start": "2026-02-02T00:00:00",
-      "end": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
+      "end": "2026-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -334,8 +334,8 @@
       "raw": {
         "name": "Luce sull'archeologia 2026 - Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
-        "endDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
+        "endDate": "2026-02-03T00:00:00",
         "url": "https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-sullarcheologia-2026/"
       }
     },
@@ -400,10 +400,10 @@
       }
     },
     {
-      "id": "33bcc399-c9df-5f88-b489-d868060fdc6a",
+      "id": "16314a0b-aae5-5adc-b409-4123f95911ca",
       "title": "Accordi internazionali",
-      "start": "2005-02-02T00:00:00",
-      "end": "2005-02-02T00:00:00",
+      "start": "2005-03-02T00:00:00",
+      "end": "2005-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -414,15 +414,15 @@
       "raw": {
         "name": "Accordi internazionali",
         "description": "",
-        "startDate": "2005-02-02T00:00:00",
-        "endDate": "2005-02-02T00:00:00",
+        "startDate": "2005-02-03T00:00:00",
+        "endDate": "2005-02-03T00:00:00",
         "url": "https://www.auditorium.com/it/accordi-internazionali/"
       }
     },
     {
-      "id": "a46a71f2-79d6-54aa-9730-850e4150b59c",
+      "id": "df2cc281-507a-5f29-859f-4c9f52ce7d04",
       "title": "AuditoriumTV",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -434,7 +434,7 @@
       "raw": {
         "name": "AuditoriumTV",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "url": "https://www.youtube.com/user/AuditoriumTV"
       }
     },
@@ -499,9 +499,49 @@
       }
     },
     {
-      "id": "a5c42277-229e-59c7-b641-996bb2018dce",
+      "id": "7468f74e-8a49-53fb-98cc-b142e38cd31c",
+      "title": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
+      "start": "2027-05-02T00:00:00",
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1483",
+      "source": "https://www.auditorium.com/it/eventi/",
+      "raw": {
+        "name": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
+        "description": "",
+        "startDate": "2027-02-05T00:00:00",
+        "endDate": "2027-04-30T20:00:00",
+        "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1483"
+      }
+    },
+    {
+      "id": "b14b5dd3-b7fe-5dc6-b6c4-2fbc38004ff4",
+      "title": "Ciak, si suona! | Accademia Nazionale di Santa Cecilia",
+      "start": "2026-08-02T16:30:00",
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://santacecilia.it/concerto/ciak-si-suona-2025/?replica=1581",
+      "source": "https://www.auditorium.com/it/eventi/",
+      "raw": {
+        "name": "Ciak, si suona! | Accademia Nazionale di Santa Cecilia",
+        "description": "",
+        "startDate": "2026-02-08T16:30:00",
+        "endDate": "2025-02-26T00:00:00",
+        "url": "https://santacecilia.it/concerto/ciak-si-suona-2025/?replica=1581"
+      }
+    },
+    {
+      "id": "fec0bf71-7a4e-5359-9605-4565154d99c7",
       "title": "Jazz Campus Orchestra",
-      "start": "2040-02-02T06:07:22.471670",
+      "start": "2040-03-02T05:56:22.532529",
       "end": "2023-09-06T21:00:00",
       "description": "",
       "location": {
@@ -513,7 +553,7 @@
       "raw": {
         "name": "Jazz Campus Orchestra",
         "description": "",
-        "startDate": "2040-02-02T06:07:22.471670",
+        "startDate": "2040-02-03T05:56:22.532529",
         "endDate": "2023-06-09T21:00:00",
         "url": "https://www.casadeljazz.com/orchestra-residente/jazz-campus-orchestra/"
       }
@@ -533,15 +573,15 @@
       "raw": {
         "name": "Upcoming events",
         "description": "",
-        "startDate": "2026-04-27T19:30:00",
-        "endDate": "2026-07-21T19:30:00",
+        "startDate": "2026-04-28T19:30:00",
+        "endDate": "2026-07-22T19:30:00",
         "url": "https://www.casadeljazz.com/en/events/"
       }
     },
     {
-      "id": "4c94301d-7e93-54cc-a6ec-456a88a0980b",
+      "id": "f51e1eab-3cc6-59ed-a31b-e65f7e73dd44",
       "title": "Casa del Jazz",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -553,15 +593,15 @@
       "raw": {
         "name": "Casa del Jazz",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "url": "https://www.youtube.com/user/casadeljazztube"
       }
     },
     {
-      "id": "d7f2af0e-07df-5d65-8a52-85909e87e644",
+      "id": "e88d2d2c-d02e-5944-865c-a0a299cf1cbc",
       "title": "PATRIZIA SCASCITELLI QUINTET",
-      "start": "2077-02-02T00:00:00",
-      "end": "2077-02-02T00:00:00",
+      "start": "2077-03-02T00:00:00",
+      "end": "2077-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -572,8 +612,8 @@
       "raw": {
         "name": "PATRIZIA SCASCITELLI QUINTET",
         "description": "",
-        "startDate": "2077-02-02T00:00:00",
-        "endDate": "2077-02-02T00:00:00",
+        "startDate": "2077-02-03T00:00:00",
+        "endDate": "2077-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/patrizia-scascitelli/"
       }
     },
@@ -598,9 +638,9 @@
       }
     },
     {
-      "id": "718b39ec-5c3f-525e-b8a5-aa71e8b446ba",
+      "id": "f483c0a0-c09d-5a6d-bf02-1a82bcdfe3a5",
       "title": "FRANCESCO FRATINI QUARTET",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": "2026-07-02T19:30:00",
       "description": "",
       "location": {
@@ -612,16 +652,16 @@
       "raw": {
         "name": "FRANCESCO FRATINI QUARTET",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "endDate": "2026-02-07T19:30:00",
         "url": "https://www.casadeljazz.com/evento/francesco-fratini-quartet/"
       }
     },
     {
-      "id": "b819f144-f708-5a2f-9682-2343fc4ec391",
+      "id": "0c534f59-ea7c-55ce-92cf-03a1d12c3965",
       "title": "SIMONE MAGGIO TRIO",
-      "start": "2026-02-05T00:00:00",
-      "end": "2027-02-05T00:00:00",
+      "start": "2026-03-05T00:00:00",
+      "end": "2027-03-05T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -632,16 +672,16 @@
       "raw": {
         "name": "SIMONE MAGGIO TRIO",
         "description": "",
-        "startDate": "2026-05-02T00:00:00",
-        "endDate": "2027-05-02T00:00:00",
+        "startDate": "2026-05-03T00:00:00",
+        "endDate": "2027-05-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/"
       }
     },
     {
-      "id": "ee96c406-1162-5955-84af-8bcbbc9c0444",
+      "id": "88e19f44-5cc0-5b3e-a579-bb171fcf2968",
       "title": "GABRIEL MARCIANO QUARTET",
-      "start": "2020-02-02T00:00:00",
-      "end": "2025-02-02T00:00:00",
+      "start": "2020-03-02T00:00:00",
+      "end": "2025-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -652,15 +692,15 @@
       "raw": {
         "name": "GABRIEL MARCIANO QUARTET",
         "description": "",
-        "startDate": "2020-02-02T00:00:00",
-        "endDate": "2025-02-02T00:00:00",
+        "startDate": "2020-02-03T00:00:00",
+        "endDate": "2025-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/gabriel-marciano-quartet-3/"
       }
     },
     {
-      "id": "8e68fbd1-0bc4-5cfa-ac10-58f0ea0bdf57",
+      "id": "ab1416af-769f-5d2c-8d3a-b3a33517e068",
       "title": "ANDREA MOLINARI “Awakening - Il tutto nel nulla”",
-      "start": "2026-02-02T06:09:13.266511",
+      "start": "2026-03-02T05:58:10.981695",
       "end": null,
       "description": "",
       "location": {
@@ -672,15 +712,15 @@
       "raw": {
         "name": "ANDREA MOLINARI “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-02-02T06:09:13.266511",
+        "startDate": "2026-02-03T05:58:10.981695",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
     },
     {
-      "id": "726f39bb-6274-5381-945f-87b1e055f83e",
+      "id": "df6f92f9-a6a0-567a-9d29-cbb1b3611bbf",
       "title": "ANDREA MOLINARI “Awakening - Il tutto nel nulla”",
-      "start": "2026-02-02T06:09:13.497906",
+      "start": "2026-03-02T05:58:11.194122",
       "end": null,
       "description": "",
       "location": {
@@ -692,15 +732,15 @@
       "raw": {
         "name": "ANDREA MOLINARI “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-02-02T06:09:13.497906",
+        "startDate": "2026-02-03T05:58:11.194122",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
     },
     {
-      "id": "8cd89d2a-a10f-5945-a065-ede9728264ed",
+      "id": "734fe642-db93-5794-a988-86b5dc69b483",
       "title": "ETTORE CARUCCI",
-      "start": "2026-02-10T00:00:00",
+      "start": "2026-03-10T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -712,16 +752,16 @@
       "raw": {
         "name": "ETTORE CARUCCI",
         "description": "",
-        "startDate": "2026-10-02T00:00:00",
+        "startDate": "2026-10-03T00:00:00",
         "endDate": "2026-02-15T18:00:00",
         "url": "https://www.casadeljazz.com/evento/ettore-carucci/"
       }
     },
     {
-      "id": "cfc02a50-49c8-5ea9-96dd-ae1d0fd8bec8",
+      "id": "ed838608-af61-5492-8e37-6fbdafd52fbf",
       "title": "CRISTIANO CELLI",
-      "start": "2023-02-02T00:00:00",
-      "end": "2024-02-02T00:00:00",
+      "start": "2023-03-02T00:00:00",
+      "end": "2024-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -732,16 +772,16 @@
       "raw": {
         "name": "CRISTIANO CELLI",
         "description": "",
-        "startDate": "2023-02-02T00:00:00",
-        "endDate": "2024-02-02T00:00:00",
+        "startDate": "2023-02-03T00:00:00",
+        "endDate": "2024-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/cristiano-celli/"
       }
     },
     {
-      "id": "f395a4bd-0c04-56c5-aada-43bc1ad61547",
+      "id": "478b8bd7-a07f-51bc-9df9-287bcac166bf",
       "title": "NO TRIO FOR CATS",
-      "start": "2025-02-02T00:00:00",
-      "end": "2012-02-02T00:00:00",
+      "start": "2025-03-02T00:00:00",
+      "end": "2012-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -752,15 +792,15 @@
       "raw": {
         "name": "NO TRIO FOR CATS",
         "description": "",
-        "startDate": "2025-02-02T00:00:00",
-        "endDate": "2012-02-02T00:00:00",
+        "startDate": "2025-02-03T00:00:00",
+        "endDate": "2012-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/no-trio-for-cats/"
       }
     },
     {
-      "id": "a5d6b303-b966-56b1-bf88-49d1ea4b312a",
+      "id": "8d84604a-9d78-5238-a5ac-08168a46037a",
       "title": "ENRICO ZANISI",
-      "start": "2016-02-02T00:00:00",
+      "start": "2016-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -772,7 +812,7 @@
       "raw": {
         "name": "ENRICO ZANISI",
         "description": "",
-        "startDate": "2016-02-02T00:00:00",
+        "startDate": "2016-02-03T00:00:00",
         "endDate": "2026-02-22T18:00:00",
         "url": "https://www.casadeljazz.com/evento/enrico-zanisi-2/"
       }
@@ -798,9 +838,9 @@
       }
     },
     {
-      "id": "ef2235fd-7149-5c29-b05f-2a1f4dec9833",
+      "id": "8a7fa495-44f1-59f4-b2cc-4c05bc291d9f",
       "title": "ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -812,7 +852,7 @@
       "raw": {
         "name": "ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "endDate": "2026-02-28T19:30:00",
         "url": "https://www.casadeljazz.com/evento/enrico-pieranunzi-simona-severini-canzoni-e-chansons/"
       }
@@ -838,10 +878,10 @@
       }
     },
     {
-      "id": "1f7c7a79-f4f1-575e-bf34-19e6508aadce",
+      "id": "2b0b5b63-3757-54b9-8e78-f8ec59ca4529",
       "title": "Summertime 2026",
-      "start": "2026-02-02T00:00:00",
-      "end": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
+      "end": "2026-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -852,15 +892,15 @@
       "raw": {
         "name": "Summertime 2026",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
-        "endDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
+        "endDate": "2026-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/rassegna/summertime-2026/"
       }
     },
     {
-      "id": "7c6348fc-f91a-5352-9fd3-a6cac7d87aae",
+      "id": "f7c5855b-40de-5638-a7c6-e4840c3fe77b",
       "title": "PAOLO FRESU/ ANTONELLO SALIS/ FURIO DI CASTRI “P.A.F”",
-      "start": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -872,7 +912,7 @@
       "raw": {
         "name": "PAOLO FRESU/ ANTONELLO SALIS/ FURIO DI CASTRI “P.A.F”",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
         "endDate": "2026-06-13T21:00:00",
         "url": "https://www.casadeljazz.com/evento/paolo-fresu-antonello-salis-furio-di-castri-p-a-f/"
       }
@@ -898,10 +938,10 @@
       }
     },
     {
-      "id": "1d0ff586-54da-5b74-9c2a-63a7ff7777d2",
+      "id": "709aa391-842d-5bfb-b06a-6a534626ce39",
       "title": "CECILE MCLORIN SALVANT",
-      "start": "2026-02-02T00:00:00",
-      "end": "2026-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
+      "end": "2026-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -912,16 +952,16 @@
       "raw": {
         "name": "CECILE MCLORIN SALVANT",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
-        "endDate": "2026-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
+        "endDate": "2026-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/cecile-mclorin-salvant-2/"
       }
     },
     {
-      "id": "79ad2e41-e937-5827-afac-d87a91224570",
+      "id": "538e4bb8-276c-5f8b-b39d-d9999d224588",
       "title": "NATE SMITH",
-      "start": "2026-02-02T00:00:00",
-      "end": "2046-02-02T00:00:00",
+      "start": "2026-03-02T00:00:00",
+      "end": "2046-03-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -932,8 +972,8 @@
       "raw": {
         "name": "NATE SMITH",
         "description": "",
-        "startDate": "2026-02-02T00:00:00",
-        "endDate": "2046-02-02T00:00:00",
+        "startDate": "2026-02-03T00:00:00",
+        "endDate": "2046-02-03T00:00:00",
         "url": "https://www.casadeljazz.com/evento/nate-smith/"
       }
     }
