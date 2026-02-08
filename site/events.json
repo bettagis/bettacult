@@ -1,10 +1,10 @@
 {
   "events": [
     {
-      "id": "7bee224e-10d8-5014-8bf3-130cbdd9d437",
+      "id": "4c96e67a-5b9f-5bf6-bde6-378a2600c14f",
       "title": "Teatro Argentina: storia, curiosità e attualità",
-      "start": "1700-07-02T00:00:00",
-      "end": "1700-07-02T00:00:00",
+      "start": "1700-08-02T00:00:00",
+      "end": "1700-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -15,16 +15,16 @@
       "raw": {
         "name": "Teatro Argentina: storia, curiosità e attualità",
         "description": "",
-        "startDate": "1700-02-07T00:00:00",
-        "endDate": "1700-02-07T00:00:00",
+        "startDate": "1700-02-08T00:00:00",
+        "endDate": "1700-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-argentina/"
       }
     },
     {
-      "id": "79cf92dd-90ad-5421-8c18-c3a6f9f033f4",
+      "id": "4a2dc851-ea4e-51be-b24d-c78ed7a600d9",
       "title": "Teatro India: il teatro industriale",
-      "start": "1913-07-02T00:00:00",
-      "end": "1913-07-02T00:00:00",
+      "start": "1913-08-02T00:00:00",
+      "end": "1913-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -35,16 +35,16 @@
       "raw": {
         "name": "Teatro India: il teatro industriale",
         "description": "",
-        "startDate": "1913-02-07T00:00:00",
-        "endDate": "1913-02-07T00:00:00",
+        "startDate": "1913-02-08T00:00:00",
+        "endDate": "1913-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-india/"
       }
     },
     {
-      "id": "0eb10c3e-fb49-5bf0-9674-cb0299a5cfbd",
+      "id": "0274bb69-1553-5e7a-9e0f-2c506df9959a",
       "title": "Teatro Torlonia: la storia del teatro pegno di amore",
-      "start": "1841-07-02T00:00:00",
-      "end": "1848-07-02T00:00:00",
+      "start": "1841-08-02T00:00:00",
+      "end": "1848-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -55,8 +55,8 @@
       "raw": {
         "name": "Teatro Torlonia: la storia del teatro pegno di amore",
         "description": "",
-        "startDate": "1841-02-07T00:00:00",
-        "endDate": "1848-02-07T00:00:00",
+        "startDate": "1841-02-08T00:00:00",
+        "endDate": "1848-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/la-fondazione/teatro-torlonia/"
       }
     },
@@ -121,10 +121,10 @@
       }
     },
     {
-      "id": "5a0e4797-4517-5379-af96-dc5431983f2d",
+      "id": "d5edee17-aeda-5a4d-a690-898588ef25d7",
       "title": "Collaborazioni - Teatro di Roma",
-      "start": "2025-07-02T00:00:00",
-      "end": "2025-08-02T00:00:00",
+      "start": "2025-08-02T00:00:00",
+      "end": null,
       "description": "",
       "location": {
         "name": null,
@@ -135,16 +135,16 @@
       "raw": {
         "name": "Collaborazioni - Teatro di Roma",
         "description": "",
-        "startDate": "2025-02-07T00:00:00",
-        "endDate": "2025-02-08T00:00:00",
+        "startDate": "2025-02-08T00:00:00",
+        "endDate": "2025-02-15T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/collaborazioni/"
       }
     },
     {
-      "id": "746773eb-3057-5d15-b1bf-919152fc7d54",
+      "id": "0c2f6745-c19a-5470-bc60-7a9f10bd837e",
       "title": "Centro studi - Teatro di Roma",
-      "start": "1994-07-02T00:00:00",
-      "end": "1994-07-02T00:00:00",
+      "start": "1994-08-02T00:00:00",
+      "end": "1994-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -155,8 +155,8 @@
       "raw": {
         "name": "Centro studi - Teatro di Roma",
         "description": "",
-        "startDate": "1994-02-07T00:00:00",
-        "endDate": "1994-02-07T00:00:00",
+        "startDate": "1994-02-08T00:00:00",
+        "endDate": "1994-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/centro-studi/"
       }
     },
@@ -181,9 +181,9 @@
       }
     },
     {
-      "id": "b5a1e309-4455-5dac-a191-bd48cf24f7fd",
+      "id": "e76a6338-0e7e-5930-8619-8f9b278ecaf0",
       "title": "Teatro di Roma",
-      "start": "2026-07-02T00:00:00",
+      "start": "2026-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -195,7 +195,7 @@
       "raw": {
         "name": "Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
+        "startDate": "2026-02-08T00:00:00",
         "url": "https://www.youtube.com/user/teatrodiroma"
       }
     },
@@ -280,10 +280,10 @@
       }
     },
     {
-      "id": "218ac6bf-4e93-5cbb-9321-94b5a4f75359",
+      "id": "89ac8db6-c528-53f1-b0ca-884073b5ad3b",
       "title": "Luce sull'archeologia 2026 - Teatro di Roma",
-      "start": "2026-07-02T00:00:00",
-      "end": "2026-07-02T00:00:00",
+      "start": "2026-08-02T00:00:00",
+      "end": "2026-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -294,8 +294,8 @@
       "raw": {
         "name": "Luce sull'archeologia 2026 - Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
-        "endDate": "2026-02-07T00:00:00",
+        "startDate": "2026-02-08T00:00:00",
+        "endDate": "2026-02-08T00:00:00",
         "url": "https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-sullarcheologia-2026/"
       }
     },
@@ -400,10 +400,10 @@
       }
     },
     {
-      "id": "3ef3888b-6722-5046-9c38-0ada3cf35f24",
+      "id": "62a3d560-31fd-54e9-89d7-7f281498a5cc",
       "title": "Accordi internazionali",
-      "start": "2005-07-02T00:00:00",
-      "end": "2005-07-02T00:00:00",
+      "start": "2005-08-02T00:00:00",
+      "end": "2005-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -414,15 +414,15 @@
       "raw": {
         "name": "Accordi internazionali",
         "description": "",
-        "startDate": "2005-02-07T00:00:00",
-        "endDate": "2005-02-07T00:00:00",
+        "startDate": "2005-02-08T00:00:00",
+        "endDate": "2005-02-08T00:00:00",
         "url": "https://www.auditorium.com/it/accordi-internazionali/"
       }
     },
     {
-      "id": "7e013822-cfd1-592d-9a9e-193b37ff521f",
+      "id": "544f2c91-07bc-569a-a98a-b31e84780719",
       "title": "AuditoriumTV",
-      "start": "2026-07-02T00:00:00",
+      "start": "2026-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -434,28 +434,8 @@
       "raw": {
         "name": "AuditoriumTV",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
+        "startDate": "2026-02-08T00:00:00",
         "url": "https://www.youtube.com/user/AuditoriumTV"
-      }
-    },
-    {
-      "id": "7468f74e-8a49-53fb-98cc-b142e38cd31c",
-      "title": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
-      "start": "2027-05-02T00:00:00",
-      "end": null,
-      "description": "",
-      "location": {
-        "name": null,
-        "address": null
-      },
-      "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1483",
-      "source": "https://www.auditorium.com/it/eventi/",
-      "raw": {
-        "name": "Lorenzo Viotti / Ettore Pagano | Accademia Nazionale di Santa Cecilia",
-        "description": "",
-        "startDate": "2027-02-05T00:00:00",
-        "endDate": "2027-04-30T20:00:00",
-        "url": "https://santacecilia.it/concerto/lorenzo-viotti-sheku-kanneh-mason/?replica=1483"
       }
     },
     {
@@ -479,9 +459,29 @@
       }
     },
     {
-      "id": "30d28257-2a41-5a83-a28e-2418383900ce",
+      "id": "7d481684-de11-5d19-a3d2-665b7565f6fe",
+      "title": "Corrado Augias - Aurelio Canonici | Accademia Nazionale di Santa Cecilia",
+      "start": "2026-08-02T11:00:00",
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://santacecilia.it/concerto/corrado-augias-aurelio-canonici-2/?replica=1613",
+      "source": "https://www.auditorium.com/it/eventi/",
+      "raw": {
+        "name": "Corrado Augias - Aurelio Canonici | Accademia Nazionale di Santa Cecilia",
+        "description": "",
+        "startDate": "2026-02-08T11:00:00",
+        "endDate": "2025-02-26T00:00:00",
+        "url": "https://santacecilia.it/concerto/corrado-augias-aurelio-canonici-2/?replica=1613"
+      }
+    },
+    {
+      "id": "78491f6b-826f-5604-b2a8-c57b35242aad",
       "title": "Jazz Campus Orchestra",
-      "start": "2040-07-02T05:48:44.709813",
+      "start": "2040-08-02T06:02:14.906323",
       "end": "2023-09-06T21:00:00",
       "description": "",
       "location": {
@@ -493,16 +493,16 @@
       "raw": {
         "name": "Jazz Campus Orchestra",
         "description": "",
-        "startDate": "2040-02-07T05:48:44.709813",
+        "startDate": "2040-02-08T06:02:14.906323",
         "endDate": "2023-06-09T21:00:00",
         "url": "https://www.casadeljazz.com/orchestra-residente/jazz-campus-orchestra/"
       }
     },
     {
-      "id": "36553e0c-a2c3-55fa-80d4-c62178d8d3a3",
+      "id": "6af2a36e-f8a2-5116-b4ed-17664d2304dd",
       "title": "Upcoming events",
-      "start": "2026-02-05T19:30:00",
-      "end": "2027-02-05T00:00:00",
+      "start": "2026-08-05T00:00:00",
+      "end": null,
       "description": "",
       "location": {
         "name": null,
@@ -513,15 +513,15 @@
       "raw": {
         "name": "Upcoming events",
         "description": "",
-        "startDate": "2026-05-02T19:30:00",
-        "endDate": "2027-05-02T00:00:00",
+        "startDate": "2026-05-08T00:00:00",
+        "endDate": "2026-07-31T18:00:00",
         "url": "https://www.casadeljazz.com/en/events/"
       }
     },
     {
-      "id": "dd79b94a-0f36-5b7e-9891-d102d24b962c",
+      "id": "c0e9442b-e1d2-54c8-b595-782cc7353852",
       "title": "Casa del Jazz",
-      "start": "2026-07-02T00:00:00",
+      "start": "2026-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -533,28 +533,28 @@
       "raw": {
         "name": "Casa del Jazz",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
+        "startDate": "2026-02-08T00:00:00",
         "url": "https://www.youtube.com/user/casadeljazztube"
       }
     },
     {
-      "id": "03e27917-c5a8-510a-80f5-04eb92de92cf",
-      "title": "Francesco Fratini Quartet",
-      "start": "2026-07-02T00:00:00",
-      "end": "2026-07-02T19:30:00",
+      "id": "5d5a93f7-3c1f-5e04-9f09-9b582cde7654",
+      "title": "Simone Maggio Trio",
+      "start": "2026-08-05T00:00:00",
+      "end": "2027-08-05T00:00:00",
       "description": "",
       "location": {
         "name": null,
         "address": null
       },
-      "url": "https://www.casadeljazz.com/evento/francesco-fratini-quartet/",
+      "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/",
       "source": "https://www.casadeljazz.com/eventi/",
       "raw": {
-        "name": "Francesco Fratini Quartet",
+        "name": "Simone Maggio Trio",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
-        "endDate": "2026-02-07T19:30:00",
-        "url": "https://www.casadeljazz.com/evento/francesco-fratini-quartet/"
+        "startDate": "2026-05-08T00:00:00",
+        "endDate": "2027-05-08T00:00:00",
+        "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/"
       }
     },
     {
@@ -578,30 +578,10 @@
       }
     },
     {
-      "id": "3ec941d1-7276-5b23-91f7-eab7d5f7754a",
-      "title": "Simone Maggio Trio",
-      "start": "2026-07-05T00:00:00",
-      "end": "2027-07-05T00:00:00",
-      "description": "",
-      "location": {
-        "name": null,
-        "address": null
-      },
-      "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/",
-      "source": "https://www.casadeljazz.com/eventi/",
-      "raw": {
-        "name": "Simone Maggio Trio",
-        "description": "",
-        "startDate": "2026-05-07T00:00:00",
-        "endDate": "2027-05-07T00:00:00",
-        "url": "https://www.casadeljazz.com/evento/simone-maggio-trio/"
-      }
-    },
-    {
-      "id": "e10bc7e3-1778-533b-8ea8-bc1cb8e94ae8",
+      "id": "6bbddcc1-6d7a-5033-b8e2-8826b74aefb2",
       "title": "Gabriel Marciano Quartet",
-      "start": "2020-07-02T00:00:00",
-      "end": "2025-07-02T00:00:00",
+      "start": "2020-08-02T00:00:00",
+      "end": "2025-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -612,15 +592,15 @@
       "raw": {
         "name": "Gabriel Marciano Quartet",
         "description": "",
-        "startDate": "2020-02-07T00:00:00",
-        "endDate": "2025-02-07T00:00:00",
+        "startDate": "2020-02-08T00:00:00",
+        "endDate": "2025-02-08T00:00:00",
         "url": "https://www.casadeljazz.com/evento/gabriel-marciano-quartet-3/"
       }
     },
     {
-      "id": "19a928f5-1c30-5dd9-a9c6-ebbb45f070a5",
+      "id": "b459cf63-04db-5e89-a4cb-e2a818408882",
       "title": "Andrea Molinari “Awakening - Il tutto nel nulla”",
-      "start": "2026-07-02T05:50:10.120778",
+      "start": "2026-08-02T06:03:12.952741",
       "end": null,
       "description": "",
       "location": {
@@ -632,15 +612,15 @@
       "raw": {
         "name": "Andrea Molinari “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-02-07T05:50:10.120778",
+        "startDate": "2026-02-08T06:03:12.952741",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
     },
     {
-      "id": "79de0d0c-4afe-5c38-8e9f-51a0e94e1c8a",
+      "id": "809bd867-dd6e-5c52-ac48-4750545f977c",
       "title": "Andrea Molinari “Awakening - Il tutto nel nulla”",
-      "start": "2026-07-02T05:50:10.370422",
+      "start": "2026-08-02T06:03:13.208973",
       "end": null,
       "description": "",
       "location": {
@@ -652,15 +632,15 @@
       "raw": {
         "name": "Andrea Molinari “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-02-07T05:50:10.370422",
+        "startDate": "2026-02-08T06:03:13.208973",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
     },
     {
-      "id": "4bfb7fa6-d2f4-5833-ac97-bc6da79a8126",
+      "id": "cc15e05a-d026-5169-b6b6-e2086fadb049",
       "title": "Ettore Carucci",
-      "start": "2026-07-10T00:00:00",
+      "start": "2026-08-10T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -672,16 +652,16 @@
       "raw": {
         "name": "Ettore Carucci",
         "description": "",
-        "startDate": "2026-10-07T00:00:00",
+        "startDate": "2026-10-08T00:00:00",
         "endDate": "2026-02-15T18:00:00",
         "url": "https://www.casadeljazz.com/evento/ettore-carucci/"
       }
     },
     {
-      "id": "f11346a0-2374-5fce-be54-52816b4bed6e",
+      "id": "65415b9a-0eff-5e0e-b19b-d75ef5899629",
       "title": "Cristiano Celli",
-      "start": "2023-07-02T00:00:00",
-      "end": "2024-07-02T00:00:00",
+      "start": "2023-08-02T00:00:00",
+      "end": "2024-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -692,16 +672,16 @@
       "raw": {
         "name": "Cristiano Celli",
         "description": "",
-        "startDate": "2023-02-07T00:00:00",
-        "endDate": "2024-02-07T00:00:00",
+        "startDate": "2023-02-08T00:00:00",
+        "endDate": "2024-02-08T00:00:00",
         "url": "https://www.casadeljazz.com/evento/cristiano-celli/"
       }
     },
     {
-      "id": "9f433d71-11b2-5ed7-9025-50b7ac0d5b25",
+      "id": "6c369147-6686-551c-a49b-c487ef5bba81",
       "title": "No trio for cats",
-      "start": "2025-07-02T00:00:00",
-      "end": "2012-07-02T00:00:00",
+      "start": "2025-08-02T00:00:00",
+      "end": "2012-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -712,15 +692,15 @@
       "raw": {
         "name": "No trio for cats",
         "description": "",
-        "startDate": "2025-02-07T00:00:00",
-        "endDate": "2012-02-07T00:00:00",
+        "startDate": "2025-02-08T00:00:00",
+        "endDate": "2012-02-08T00:00:00",
         "url": "https://www.casadeljazz.com/evento/no-trio-for-cats/"
       }
     },
     {
-      "id": "04602b5e-b7f1-5c3d-8ab1-ffa16c292749",
+      "id": "d3871cb3-152f-56d9-a9e4-dae2a8dd52fd",
       "title": "ENRICO ZANISI",
-      "start": "2016-07-02T00:00:00",
+      "start": "2016-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -732,7 +712,7 @@
       "raw": {
         "name": "ENRICO ZANISI",
         "description": "",
-        "startDate": "2016-02-07T00:00:00",
+        "startDate": "2016-02-08T00:00:00",
         "endDate": "2026-02-22T18:00:00",
         "url": "https://www.casadeljazz.com/evento/enrico-zanisi-2/"
       }
@@ -758,9 +738,9 @@
       }
     },
     {
-      "id": "1ee941a7-592a-5c9b-8a73-9e4492be6eac",
+      "id": "8974ea9f-4537-5baf-9cdd-879c248cdc12",
       "title": "ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”",
-      "start": "2026-07-02T00:00:00",
+      "start": "2026-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -772,7 +752,7 @@
       "raw": {
         "name": "ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”",
         "description": "",
-        "startDate": "2026-02-07T00:00:00",
+        "startDate": "2026-02-08T00:00:00",
         "endDate": "2026-02-28T19:30:00",
         "url": "https://www.casadeljazz.com/evento/enrico-pieranunzi-simona-severini-canzoni-e-chansons/"
       }
@@ -818,9 +798,9 @@
       }
     },
     {
-      "id": "60b79adc-5505-5612-bf7e-80a872cf4859",
+      "id": "2cb8cfca-ff3f-5d79-b3d3-7161a2d03d95",
       "title": "Ludovica Manzo - Ruggero Fornari",
-      "start": "2026-07-10T00:00:00",
+      "start": "2026-08-10T00:00:00",
       "end": "2026-07-03T19:30:00",
       "description": "",
       "location": {
@@ -832,7 +812,7 @@
       "raw": {
         "name": "Ludovica Manzo - Ruggero Fornari",
         "description": "",
-        "startDate": "2026-10-07T00:00:00",
+        "startDate": "2026-10-08T00:00:00",
         "endDate": "2026-03-07T19:30:00",
         "url": "https://www.casadeljazz.com/evento/ludovica-manzo-ruggero-fornari/"
       }
@@ -858,9 +838,9 @@
       }
     },
     {
-      "id": "5205f48e-125b-5976-b27f-d5e2e02300e2",
+      "id": "db749f8a-04dc-5a4a-8cb8-56b7fc128a4b",
       "title": "Vittorio Esposito Quartet",
-      "start": "2020-07-02T00:00:00",
+      "start": "2020-08-02T00:00:00",
       "end": null,
       "description": "",
       "location": {
@@ -872,16 +852,16 @@
       "raw": {
         "name": "Vittorio Esposito Quartet",
         "description": "",
-        "startDate": "2020-02-07T00:00:00",
+        "startDate": "2020-02-08T00:00:00",
         "endDate": "2026-03-13T19:30:00",
         "url": "https://www.casadeljazz.com/evento/vittorio-esposito-quartet-2/"
       }
     },
     {
-      "id": "50860329-eb0e-5066-986f-d7b59d624bb2",
+      "id": "8f6cf31e-7ed3-5b82-8bfd-c3ac368c7ac2",
       "title": "LOGAN RICHARDSON TRIO feat. JEFF TAIN WATTS",
-      "start": "1980-07-02T00:00:00",
-      "end": "1980-07-02T00:00:00",
+      "start": "1980-08-02T00:00:00",
+      "end": "1980-08-02T00:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -892,9 +872,29 @@
       "raw": {
         "name": "LOGAN RICHARDSON TRIO feat. JEFF TAIN WATTS",
         "description": "",
-        "startDate": "1980-02-07T00:00:00",
-        "endDate": "1980-02-07T00:00:00",
+        "startDate": "1980-02-08T00:00:00",
+        "endDate": "1980-02-08T00:00:00",
         "url": "https://www.casadeljazz.com/evento/logan-richardson-trio-feat-jeff-tain-watts/"
+      }
+    },
+    {
+      "id": "96e2bd3c-902f-55b5-9960-746a3e4b88a0",
+      "title": "Giulia Lorenzoni 4tet",
+      "start": "2024-08-02T00:00:00",
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://www.casadeljazz.com/evento/giulia-lorenzoni-4tet/",
+      "source": "https://www.casadeljazz.com/eventi/",
+      "raw": {
+        "name": "Giulia Lorenzoni 4tet",
+        "description": "",
+        "startDate": "2024-02-08T00:00:00",
+        "endDate": "2024-02-17T00:00:00",
+        "url": "https://www.casadeljazz.com/evento/giulia-lorenzoni-4tet/"
       }
     }
   ]
