@@ -3,28 +3,28 @@ VERSION:2.0
 PRODID:-//rome-events-calendar//example//IT
 BEGIN:VEVENT
 SUMMARY:Teatro Argentina: storia\, curiosità e attualità
-DTSTART:17000902T000000
-DTEND:17000902T000000
-DTSTAMP:20260209T061622Z
-UID:2b437f43-d854-5079-b485-1bb352099d74
+DTSTART:17001002T000000
+DTEND:17001002T000000
+DTSTAMP:20260210T062111Z
+UID:0f4a4468-639a-5a33-9ec7-1c030239d64f
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/la-fondazione/teatro-argentina/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro India: il teatro industriale
-DTSTART:19130902T000000
-DTEND:19130902T000000
-DTSTAMP:20260209T061622Z
-UID:624dbcf2-f1bf-5dd2-9a5f-36491e45a79f
+DTSTART:19131002T000000
+DTEND:19131002T000000
+DTSTAMP:20260210T062111Z
+UID:2ee89de7-0c8a-5017-9d77-b8c3d6e695db
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/la-fondazione/teatro-india/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro Torlonia: la storia del teatro pegno di amore
-DTSTART:18410902T000000
-DTEND:18480902T000000
-DTSTAMP:20260209T061622Z
-UID:cdece9b0-73b0-5a05-b7f6-cd02a0d493d6
+DTSTART:18411002T000000
+DTEND:18481002T000000
+DTSTAMP:20260210T062111Z
+UID:7cb47794-aa5a-56fc-8980-c367d86d5f3a
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/la-fondazione/teatro-torlonia/
 END:VEVENT
@@ -32,25 +32,25 @@ BEGIN:VEVENT
 SUMMARY:Formazione - Teatro di Roma
 DTSTART:20260403T000000
 DTEND:20260104T000000
-DTSTAMP:20260209T061622Z
+DTSTAMP:20260210T062111Z
 UID:4657c157-98cf-5374-92fa-dbed5eaeec65
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/formazione/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Collaborazioni - Teatro di Roma
-DTSTART:20250902T000000
-DTSTAMP:20260209T061622Z
-UID:0906c782-e76b-5c04-804d-96385acd7a61
+DTSTART:20251002T000000
+DTSTAMP:20260210T062111Z
+UID:4e89a76c-7c2d-5b38-99e0-764462c640c9
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/collaborazioni/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Centro studi - Teatro di Roma
-DTSTART:19940902T000000
-DTEND:19940902T000000
-DTSTAMP:20260209T061622Z
-UID:bcce4d87-fefc-5881-a3cc-1972f0b302da
+DTSTART:19941002T000000
+DTEND:19941002T000000
+DTSTAMP:20260210T062111Z
+UID:78eb56f1-a9a5-586d-aa7e-b0f6b8fcc4e8
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/centro-studi/
 END:VEVENT
@@ -58,229 +58,221 @@ BEGIN:VEVENT
 SUMMARY:Teatro Ragazzi - Teatro di Roma
 DTSTART:20260803T000000
 DTEND:20260803T000000
-DTSTAMP:20260209T061622Z
+DTSTAMP:20260210T062111Z
 UID:49497b57-aea8-5469-a216-aed311d6f949
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/progetti/teatro-ragazzi/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro di Roma
-DTSTART:20260902T000000
-DTSTAMP:20260209T061622Z
-UID:9a305c02-b70c-505e-bd3a-0369fb8e4106
+DTSTART:20261002T000000
+DTSTAMP:20260210T062111Z
+UID:a55d4ba2-70d2-5cf8-b485-d7097a24b1d2
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.youtube.com/user/teatrodiroma
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Luce sull'archeologia 2026 - Teatro di Roma
-DTSTART:20260902T000000
-DTEND:20260902T000000
-DTSTAMP:20260209T061622Z
-UID:ae7236c4-f795-55da-bc46-891efc822435
-DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
- www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-s
- ullarcheologia-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Casanova ½ - Teatro di Roma
 DTSTART:20270201T000000
 DTEND:20280201T000000
-DTSTAMP:20260209T061622Z
+DTSTAMP:20260210T062111Z
 UID:788c5bf4-2c2f-55d9-86da-e157981d7180
 DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
  www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia/casanov
  a-%c2%bd/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Luce sull'archeologia 2026 - Teatro di Roma
+DTSTART:20261002T000000
+DTEND:20261002T000000
+DTSTAMP:20260210T062111Z
+UID:bc978127-ada3-5cbf-ae8f-1eb29157153e
+DESCRIPTION:Fonte: https://www.teatrodiroma.net/calendario/\nURL: https://
+ www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-s
+ ullarcheologia-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Accordi internazionali
-DTSTART:20050902T000000
-DTEND:20050902T000000
-DTSTAMP:20260209T061622Z
-UID:09c2a239-92fb-592f-8a3d-76f19023f9f8
+DTSTART:20051002T000000
+DTEND:20051002T000000
+DTSTAMP:20260210T062111Z
+UID:9f058e4d-dd46-5f53-a718-c5181bbe8a4b
 DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
  .auditorium.com/it/accordi-internazionali/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AuditoriumTV
-DTSTART:20260902T000000
-DTSTAMP:20260209T061622Z
-UID:a4b981a7-5083-59cb-ab3f-f48b949263eb
+DTSTART:20261002T000000
+DTSTAMP:20260210T062111Z
+UID:79a86e59-630d-5059-9c1e-bc250a7424bd
 DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://www
  .youtube.com/user/AuditoriumTV
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ciak\, si suona! | Accademia Nazionale di Santa Cecilia
-DTSTART:20260902T103000
-DTSTAMP:20260209T061622Z
-UID:624781de-14a9-5220-a513-383456060b6a
-DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://san
- tacecilia.it/concerto/ciak-si-suona-2025/?replica=1582
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Asmik Grigorian | Accademia Nazionale di Santa Cecilia
 DTSTART:20261102T203000
-DTSTAMP:20260209T061622Z
+DTSTAMP:20260210T062111Z
 UID:90caab22-f59b-55aa-9fed-cd762fc1e267
 DESCRIPTION:Fonte: https://www.auditorium.com/it/eventi/\nURL: https://san
  tacecilia.it/concerto/asmik-grigorian/?replica=1445
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jazz Campus Orchestra
-DTSTART:20400902T060945
+DTSTART:20401002T061427
 DTEND:20230906T210000
-DTSTAMP:20260209T061622Z
-UID:2a7088ec-5006-52b1-a9b2-78f2496f7cd7
+DTSTAMP:20260210T062111Z
+UID:abb1d47e-1cee-5a48-9144-028836a77902
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/orchestra-residente/jazz-campus-orchestra/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Upcoming events
-DTSTART:20260405T193000
-DTSTAMP:20260209T061622Z
-UID:88528673-97fc-58f7-8c75-774a17f0ad1e
+DTSTART:20260505T193000
+DTSTAMP:20260210T062111Z
+UID:0f3e7d18-6abf-57b8-a540-c2518d757634
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/en/events/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Casa del Jazz
-DTSTART:20260902T000000
-DTSTAMP:20260209T061622Z
-UID:9106d691-2028-50cb-a723-cebb71d715da
+DTSTART:20261002T000000
+DTSTAMP:20260210T062111Z
+UID:e68052c5-1ed2-5ea8-9524-6c8c583ece19
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.y
  outube.com/user/casadeljazztube
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Gabriel Marciano Quartet
-DTSTART:20200902T000000
-DTEND:20250902T000000
-DTSTAMP:20260209T061622Z
-UID:319a2c1d-f39d-5d81-96c9-4c8a92b3e53e
+DTSTART:20201002T000000
+DTEND:20251002T000000
+DTSTAMP:20260210T062111Z
+UID:9d07ccaf-a9b9-5475-b05d-f67af5134564
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/gabriel-marciano-quartet-3/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Andrea Molinari “Awakening - Il tutto nel nulla”
-DTSTART:20260902T061013
-DTSTAMP:20260209T061622Z
-UID:f33999ac-ffdd-5568-8ac3-5d15781764f7
+DTSTART:20261002T061454
+DTSTAMP:20260210T062111Z
+UID:b03a74eb-4748-5ea8-af19-5e2f54364955
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Andrea Molinari “Awakening - Il tutto nel nulla”
-DTSTART:20260902T061013
-DTSTAMP:20260209T061622Z
-UID:e4bda4f9-6a56-5494-b7e3-d842facf7e2b
+DTSTART:20261002T061454
+DTSTAMP:20260210T062111Z
+UID:099da40a-1b5c-5d8e-aee2-836688be5ff2
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ettore Carucci
-DTSTART:20260910T000000
-DTSTAMP:20260209T061622Z
-UID:b4f61d22-a49f-5bec-8e36-ff59c6fddb90
+DTSTART:20261010T000000
+DTSTAMP:20260210T062111Z
+UID:2801adf7-ba62-5982-896d-897d06dc9e36
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/ettore-carucci/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cristiano Celli
-DTSTART:20230902T000000
-DTEND:20240902T000000
-DTSTAMP:20260209T061622Z
-UID:61e6a2d9-1af0-579c-8174-756c9c221559
+DTSTART:20231002T000000
+DTEND:20241002T000000
+DTSTAMP:20260210T062111Z
+UID:000611f1-f891-5fcb-ad0e-34fd62f54cae
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/cristiano-celli/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:No trio for cats
-DTSTART:20250902T000000
-DTEND:20120902T000000
-DTSTAMP:20260209T061622Z
-UID:974bcf4c-345b-55ac-a17d-c3f621c5001c
+DTSTART:20251002T000000
+DTEND:20121002T000000
+DTSTAMP:20260210T062111Z
+UID:9816e072-1bc5-58d1-9efc-818311843aaf
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/no-trio-for-cats/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:ENRICO ZANISI
-DTSTART:20160902T000000
-DTSTAMP:20260209T061622Z
-UID:ac03914d-cfe0-5062-994c-7ab9183a939e
+SUMMARY:Enrico Zanisi
+DTSTART:20161002T000000
+DTSTAMP:20260210T062111Z
+UID:e891e693-2b99-562b-9513-28d743a71e8b
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/enrico-zanisi-2/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:ENRICO PIERANUNZI & SIMONA SEVERINI “Canzoni e chansons”
-DTSTART:20260902T000000
-DTSTAMP:20260209T061622Z
-UID:f5327f09-879b-5a82-abee-9494ce34fc19
+SUMMARY:Enrico Pieranunzi & Simona Severini “Canzoni e chansons”
+DTSTART:20261002T000000
+DTSTAMP:20260210T062111Z
+UID:a1b181f0-ef75-5e43-b440-fa4c4046dc74
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/enrico-pieranunzi-simona-severini-canzoni-e-chansons
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:ENRICO PIERANUNZI “Youth Trio”
+SUMMARY:Enrico Pieranunzi “Youth Trio”
 DTSTART:20260103T180000
-DTSTAMP:20260209T061622Z
-UID:72e0c2b4-eddb-5ad9-9416-cf2d0dd236f4
+DTSTAMP:20260210T062111Z
+UID:9a424215-8ed6-51f2-b5e0-d1b924408662
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/enrico-pieranunzi-youth-trio/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:NICOLA STILO QUARTET
+SUMMARY:Nicola Stilo Quartet
 DTSTART:20260603T193000
-DTSTAMP:20260209T061622Z
-UID:b4e578ab-e63b-53f9-a5f0-0916a136786c
+DTSTAMP:20260210T062111Z
+UID:79dc9b25-62c5-5915-8097-0dc849ecbf8d
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/nicola-stilo-quartet/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ludovica Manzo - Ruggero Fornari
-DTSTART:20260910T000000
+DTSTART:20261010T000000
 DTEND:20260703T193000
-DTSTAMP:20260209T061622Z
-UID:55e380e7-c114-54cf-9dc1-4690f7298e85
+DTSTAMP:20260210T062111Z
+UID:7430a85a-817f-5348-bb88-62bbc2293601
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/ludovica-manzo-ruggero-fornari/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Donatella Montinaro Quartet
 DTSTART:20260803T180000
-DTSTAMP:20260209T061622Z
+DTSTAMP:20260210T062111Z
 UID:34a8d9e6-6bc0-5e71-af67-b4bde5afb613
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/donatella-montinaro-quartet/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Vittorio Esposito Quartet
-DTSTART:20200902T000000
-DTSTAMP:20260209T061622Z
-UID:e34b0d8b-1f79-517c-a02a-1d5b41d26419
+DTSTART:20201002T000000
+DTSTAMP:20260210T062111Z
+UID:cfd280fb-10a5-5c2a-ab8f-7e1017a0ffd9
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/vittorio-esposito-quartet-2/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:LOGAN RICHARDSON TRIO feat. JEFF TAIN WATTS
-DTSTART:19800902T000000
-DTEND:19800902T000000
-DTSTAMP:20260209T061622Z
-UID:85f02d9f-78fb-55ec-be90-cc35988704f1
+SUMMARY:Logan Richardson Trio feat. Jeef Tain Watts
+DTSTART:19801002T000000
+DTEND:19801002T000000
+DTSTAMP:20260210T062111Z
+UID:593fbd23-38e9-5d03-b837-837be5c56d72
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/logan-richardson-trio-feat-jeff-tain-watts/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Giulia Lorenzoni 4tet
-DTSTART:20240902T000000
-DTSTAMP:20260209T061622Z
-UID:0a3071d6-8704-5d6e-bcef-54f93ba092e3
+DTSTART:20241002T000000
+DTSTAMP:20260210T062111Z
+UID:53812cb6-3af3-53c2-b683-5143837527cd
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/giulia-lorenzoni-4tet/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CHIARE’
-DTSTART:20260902T000000
-DTEND:20250902T000000
-DTSTAMP:20260209T061622Z
-UID:69949d4f-d6b6-58ca-94ce-3490023a5219
+SUMMARY:Chiarè
+DTSTART:20261002T000000
+DTEND:20251002T000000
+DTSTAMP:20260210T062111Z
+UID:2c02e4fb-6ea6-508b-a6e3-f9891eef56ee
 DESCRIPTION:Fonte: https://www.casadeljazz.com/eventi/\nURL: https://www.c
  asadeljazz.com/evento/chiare/
 END:VEVENT
