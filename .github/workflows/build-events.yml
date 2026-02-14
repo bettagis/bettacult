@@ -36,11 +36,11 @@ jobs:
         run: |
           python scraper/unified_events.py --urls-file scraper/urls.txt -j site/events.json -c site/events.ics
 
-      - name: Copia risultati in docs/
+            - name: Copia risultati in docs/
         run: |
           mkdir -p docs
-          cp site/events.json docs/events.json
-          cp site/events.ics docs/events.ics
+          [ -f site/events.json ] && cp site/events.json docs/events.json || true
+          [ -f site/events.ics ] && cp site/events.ics docs/events.ics || true
 
       - name: Show git status (debug)
         run: |
