@@ -1,3 +1,19 @@
+from typing import Dict, Any, Optional
+import uuid
+from datetime import datetime
+from dateutil import parser as dateutil_parser
+
+
+def parse_date_to_dt(date_str: Optional[str]) -> Optional[datetime]:
+    """Parse a date string to a datetime object, or return None if invalid."""
+    if not date_str or not isinstance(date_str, str):
+        return None
+    try:
+        return dateutil_parser.parse(date_str)
+    except (ValueError, TypeError):
+        return None
+
+
 def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     from datetime import datetime, timedelta
     title = raw.get("name") or raw.get("headline") or ""
