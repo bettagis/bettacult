@@ -15,8 +15,8 @@
       "raw": {
         "name": "Attività culturali - Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-14T00:00:00",
-        "endDate": "2026-10-14T00:00:00",
+        "startDate": "2026-02-21T00:00:00",
+        "endDate": "2026-10-21T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/attivita-culturali/"
       }
     },
@@ -75,7 +75,7 @@
       "raw": {
         "name": "Collaborazioni - Teatro di Roma",
         "description": "",
-        "startDate": "2025-02-13T00:00:00",
+        "startDate": "2025-02-14T00:00:00",
         "endDate": "2025-02-15T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/collaborazioni/"
       }
@@ -95,8 +95,8 @@
       "raw": {
         "name": "Centro studi - Teatro di Roma",
         "description": "",
-        "startDate": "1994-02-13T00:00:00",
-        "endDate": "1994-02-13T00:00:00",
+        "startDate": "1994-02-14T00:00:00",
+        "endDate": "1994-02-14T00:00:00",
         "url": "https://www.teatrodiroma.net/progetti/centro-studi/"
       }
     },
@@ -221,26 +221,6 @@
       }
     },
     {
-      "id": "25190aec-cb7f-5d4c-84e9-39410c17a17a",
-      "title": "Ottantanove - Teatro di Roma",
-      "start": null,
-      "end": null,
-      "description": "",
-      "location": {
-        "name": null,
-        "address": null
-      },
-      "url": "https://www.teatrodiroma.net/progetti/attivita-culturali/ottantanove/",
-      "source": "https://www.teatrodiroma.net/calendario/",
-      "raw": {
-        "name": "Ottantanove - Teatro di Roma",
-        "description": "",
-        "startDate": "2026-02-13T00:00:00",
-        "endDate": "2026-02-13T00:00:00",
-        "url": "https://www.teatrodiroma.net/progetti/attivita-culturali/ottantanove/"
-      }
-    },
-    {
       "id": "393b8312-bea3-57b1-b3a6-a47e6dfe2d3a",
       "title": "Luce sull'archeologia 2026 - Teatro di Roma",
       "start": null,
@@ -255,8 +235,8 @@
       "raw": {
         "name": "Luce sull'archeologia 2026 - Teatro di Roma",
         "description": "",
-        "startDate": "2026-02-13T00:00:00",
-        "endDate": "2026-02-13T00:00:00",
+        "startDate": "2026-02-14T00:00:00",
+        "endDate": "2026-02-14T00:00:00",
         "url": "https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/luce-sullarcheologia-2026/"
       }
     },
@@ -321,6 +301,26 @@
       }
     },
     {
+      "id": "cc46feca-0ab7-5262-9a8d-bcd3a1847f78",
+      "title": "La parola di Napoli. La drammaturgia del \"dopo Eduardo\" in Italia - Teatro di Roma",
+      "start": null,
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://www.teatrodiroma.net/progetti/attivita-culturali/la-parola-di-napoli-la-drammaturgia-del-dopo-eduardo-in-italia/",
+      "source": "https://www.teatrodiroma.net/calendario/",
+      "raw": {
+        "name": "La parola di Napoli. La drammaturgia del \"dopo Eduardo\" in Italia - Teatro di Roma",
+        "description": "",
+        "startDate": "2026-02-20T00:00:00",
+        "endDate": "1988-02-20T00:00:00",
+        "url": "https://www.teatrodiroma.net/progetti/attivita-culturali/la-parola-di-napoli-la-drammaturgia-del-dopo-eduardo-in-italia/"
+      }
+    },
+    {
       "id": "8ae5c439-ac84-5002-afb6-61f2656ee6c2",
       "title": "Jazz Campus Orchestra",
       "start": null,
@@ -335,16 +335,16 @@
       "raw": {
         "name": "Jazz Campus Orchestra",
         "description": "",
-        "startDate": "2040-02-13T06:05:10.395542",
+        "startDate": "2040-02-14T05:50:41.925435",
         "endDate": "2023-06-09T21:00:00",
         "url": "https://www.casadeljazz.com/orchestra-residente/jazz-campus-orchestra/"
       }
     },
     {
-      "id": "f089c493-a284-5d72-8274-7915aed9523a",
+      "id": "7fca5a6e-437d-5af3-9341-72f1f0a263c1",
       "title": "Upcoming events",
-      "start": "2026-08-05T19:30:00",
-      "end": "2026-01-08T19:30:00",
+      "start": "2026-09-05T19:30:00",
+      "end": "2026-02-08T18:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -355,8 +355,8 @@
       "raw": {
         "name": "Upcoming events",
         "description": "",
-        "startDate": "2026-05-08T19:30:00",
-        "endDate": "2026-08-01T19:30:00",
+        "startDate": "2026-05-09T19:30:00",
+        "endDate": "2026-08-02T18:00:00",
         "url": "https://www.casadeljazz.com/en/events/"
       }
     },
@@ -375,13 +375,13 @@
       "raw": {
         "name": "Casa del Jazz",
         "description": "",
-        "startDate": "2026-02-13T00:00:00",
+        "startDate": "2026-02-14T00:00:00",
         "url": "https://www.youtube.com/user/casadeljazztube"
       }
     },
     {
-      "id": "7b46f36b-37e7-5935-8b70-3080db6cd202",
-      "title": "Gabriel Marciano Quartet",
+      "id": "40cf96a7-c944-584d-9fb5-c120fd0eaa24",
+      "title": "Andrea Molinari “Awakening - Il tutto nel nulla”",
       "start": null,
       "end": null,
       "description": "",
@@ -389,14 +389,14 @@
         "name": null,
         "address": null
       },
-      "url": "https://www.casadeljazz.com/evento/gabriel-marciano-quartet-3/",
+      "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/",
       "source": "https://www.casadeljazz.com/eventi/",
       "raw": {
-        "name": "Gabriel Marciano Quartet",
+        "name": "Andrea Molinari “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2020-02-13T00:00:00",
-        "endDate": "2025-02-13T00:00:00",
-        "url": "https://www.casadeljazz.com/evento/gabriel-marciano-quartet-3/"
+        "startDate": "2026-02-14T05:50:44.558420",
+        "endDate": "2026-02-14T19:30:00",
+        "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
     },
     {
@@ -420,26 +420,6 @@
       }
     },
     {
-      "id": "40cf96a7-c944-584d-9fb5-c120fd0eaa24",
-      "title": "Andrea Molinari “Awakening - Il tutto nel nulla”",
-      "start": null,
-      "end": null,
-      "description": "",
-      "location": {
-        "name": null,
-        "address": null
-      },
-      "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/",
-      "source": "https://www.casadeljazz.com/eventi/",
-      "raw": {
-        "name": "Andrea Molinari “Awakening - Il tutto nel nulla”",
-        "description": "",
-        "startDate": "2026-02-13T06:05:38.379053",
-        "endDate": "2026-02-14T19:30:00",
-        "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
-      }
-    },
-    {
       "id": "7120f05e-62cb-536f-830f-63f95b05ae4b",
       "title": "Ettore Carucci",
       "start": null,
@@ -454,7 +434,7 @@
       "raw": {
         "name": "Ettore Carucci",
         "description": "",
-        "startDate": "2026-10-13T00:00:00",
+        "startDate": "2026-10-14T00:00:00",
         "endDate": "2026-02-15T18:00:00",
         "url": "https://www.casadeljazz.com/evento/ettore-carucci/"
       }
@@ -474,8 +454,8 @@
       "raw": {
         "name": "Cristiano Celli",
         "description": "",
-        "startDate": "2023-02-13T00:00:00",
-        "endDate": "2024-02-13T00:00:00",
+        "startDate": "2023-02-14T00:00:00",
+        "endDate": "2024-02-14T00:00:00",
         "url": "https://www.casadeljazz.com/evento/cristiano-celli/"
       }
     },
@@ -494,8 +474,8 @@
       "raw": {
         "name": "No trio for cats",
         "description": "",
-        "startDate": "2025-02-13T00:00:00",
-        "endDate": "2012-02-13T00:00:00",
+        "startDate": "2025-02-14T00:00:00",
+        "endDate": "2012-02-14T00:00:00",
         "url": "https://www.casadeljazz.com/evento/no-trio-for-cats/"
       }
     },
@@ -514,7 +494,7 @@
       "raw": {
         "name": "Enrico Zanisi",
         "description": "",
-        "startDate": "2016-02-13T00:00:00",
+        "startDate": "2016-02-14T00:00:00",
         "endDate": "2026-02-22T18:00:00",
         "url": "https://www.casadeljazz.com/evento/enrico-zanisi-2/"
       }
@@ -554,7 +534,7 @@
       "raw": {
         "name": "Enrico Pieranunzi & Simona Severini “Canzoni e chansons”",
         "description": "",
-        "startDate": "2026-02-13T00:00:00",
+        "startDate": "2026-02-14T00:00:00",
         "endDate": "2026-02-28T19:30:00",
         "url": "https://www.casadeljazz.com/evento/enrico-pieranunzi-simona-severini-canzoni-e-chansons/"
       }
@@ -614,7 +594,7 @@
       "raw": {
         "name": "Ludovica Manzo - Ruggero Fornari",
         "description": "",
-        "startDate": "2026-10-13T00:00:00",
+        "startDate": "2026-10-14T00:00:00",
         "endDate": "2026-03-07T19:30:00",
         "url": "https://www.casadeljazz.com/evento/ludovica-manzo-ruggero-fornari/"
       }
@@ -654,7 +634,7 @@
       "raw": {
         "name": "Vittorio Esposito Quartet",
         "description": "",
-        "startDate": "2020-02-13T00:00:00",
+        "startDate": "2020-02-14T00:00:00",
         "endDate": "2026-03-13T19:30:00",
         "url": "https://www.casadeljazz.com/evento/vittorio-esposito-quartet-2/"
       }
@@ -674,8 +654,8 @@
       "raw": {
         "name": "Logan Richardson Trio feat. Jeef Tain Watts",
         "description": "",
-        "startDate": "1980-02-13T00:00:00",
-        "endDate": "1980-02-13T00:00:00",
+        "startDate": "1980-02-14T00:00:00",
+        "endDate": "1980-02-14T00:00:00",
         "url": "https://www.casadeljazz.com/evento/logan-richardson-trio-feat-jeff-tain-watts/"
       }
     },
@@ -694,7 +674,7 @@
       "raw": {
         "name": "Giulia Lorenzoni 4tet",
         "description": "",
-        "startDate": "2024-02-13T00:00:00",
+        "startDate": "2024-02-14T00:00:00",
         "endDate": "2024-02-17T00:00:00",
         "url": "https://www.casadeljazz.com/evento/giulia-lorenzoni-4tet/"
       }
@@ -717,6 +697,26 @@
         "startDate": "2026-03-15T00:00:00",
         "endDate": "2026-12-13T00:00:00",
         "url": "https://www.casadeljazz.com/rassegna/junctions-beyond-jazz/"
+      }
+    },
+    {
+      "id": "99600afa-e595-5983-a79c-1ed168a3e2f0",
+      "title": "Junctions Beyond - Jazz Il Suono del Ritmo: Flavio Tanzi",
+      "start": null,
+      "end": null,
+      "description": "",
+      "location": {
+        "name": null,
+        "address": null
+      },
+      "url": "https://www.casadeljazz.com/evento/junctions-beyond-jazz-il-suono-del-ritmo-flavio-tanzi/",
+      "source": "https://www.casadeljazz.com/eventi/",
+      "raw": {
+        "name": "Junctions Beyond - Jazz Il Suono del Ritmo: Flavio Tanzi",
+        "description": "",
+        "startDate": "2026-09-14T00:00:00",
+        "endDate": "2027-08-14T00:00:00",
+        "url": "https://www.casadeljazz.com/evento/junctions-beyond-jazz-il-suono-del-ritmo-flavio-tanzi/"
       }
     }
   ]
