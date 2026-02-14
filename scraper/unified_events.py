@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
 import os
 import re
 import json
@@ -8,6 +11,7 @@ from urllib.parse import urljoin
 import uuid
 from datetime import datetime, timedelta
 from dateutil import parser as dateutil_parser
+
 
 # Config
 URLS_FILE = "scraper/urls.txt"
