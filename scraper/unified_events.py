@@ -114,9 +114,14 @@ def find_dates_in_text(text: str) -> List[datetime]:
         return dates
 
 def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
+    # Cerca prima start/end nella root/standard, fallback su raw se serve
     title = raw.get("name") or raw.get("headline") or ""
-    start_dt = parse_date_to_dt(raw.get("startDate") or raw.get("start"))
-    end_dt = parse_date_to_dt(raw.get("endDate") or raw.get("end"))
+    # Prendi start/endDate dalla root o da raw
+    start_val = raw.get("startDate") or raw.get("start") or (raw.get("raw", {}).get("startDate") if isinstance(raw.get("raw"), dict) else None)
+    end_val = raw.get("endDate") or raw.get("end") or (raw.get("raw", {}).get("endDate") if isinstance(raw.get("raw"), dict) else None)
+
+    start_dt = parse_date_to_dt(start_val)
+    end_dt = parse_date_to_dt(end_val)
     description = raw.get("description") or ""
     url = raw.get("url") or raw.get("sameAs") or raw.get("mainEntityOfPage") or raw.get("@id") or source_url
     location_raw = raw.get("location") or {}
@@ -153,7 +158,6 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "source": source_url,
         "raw": raw
     }
-
 def is_nav_text(text: str) -> bool:
     if not text:
         return False
