@@ -19,13 +19,13 @@
     async function loadEvents() {
       const res = await fetch("events.json", { cache: 'no-store' });
       const data = await res.json();
-      return (data.events || []).map(e => ({
-    id: e.id,
-    title: `${e.title} — ${e.source}`,
-    start: e.start,
-    end: e.end,
-    url: e.url
-  }));
+     return (data.events || []).map(e => ({
+  id: e.id,
+  title: `${e.title} — ${e.source}`,
+  start: e.start || (e.raw && e.raw.startDate) || "",
+  end: e.end || (e.raw && e.raw.endDate) || "",
+  url: e.url
+}));
 }
 
     document.addEventListener('DOMContentLoaded', async function () {
