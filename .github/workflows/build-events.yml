@@ -36,7 +36,7 @@ jobs:
         run: |
           python scraper/unified_events.py --urls-file scraper/urls.txt -j site/events.json -c site/events.ics
 
-            - name: Copia risultati in docs/
+      - name: Copia risultati in docs/
         run: |
           mkdir -p docs
           [ -f site/events.json ] && cp site/events.json docs/events.json || true
