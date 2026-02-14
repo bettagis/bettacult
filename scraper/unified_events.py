@@ -81,20 +81,26 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     start_val = raw.get("startDate") or raw.get("start") or (raw.get("raw", {}).get("startDate") if isinstance(raw.get("raw"), dict) else None)
     end_val = raw.get("endDate") or raw.get("end") or (raw.get("raw", {}).get("endDate") if isinstance(raw.get("raw"), dict) else None)
 
-    if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
-        desc = raw.get("description", "")
-        if not desc and isinstance(raw.get("raw"), dict):
-            desc = raw["raw"].get("description", "")
+   if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
+    desc = raw.get("description", "")
+    if not desc and isinstance(raw.get("raw"), dict):
+        desc = raw["raw"].get("description", "")
+   
+       # Prova con la funzione custom
+    from scraper.utils_date_parsing import extract_dates_from_desc
+    dates = extract_dates_from_desc(desc)
+    if dates:
+        start_val = dates[0].isoformat()
+        end_val = dates[-1].isoformat() if len(dates) > 1 else None
+    else:
+        # Fallback legacy: usa ancora dateparser solo se la funzione custom non trova nulla
         from dateparser.search import search_dates
         try:
             found = search_dates(desc, languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
-            dates = [t for (_, t) in found or [] if isinstance(t, datetime) and now - timedelta(days=2) < t < now + timedelta(days=366)]
+            dates = [t for (_, t) in found or [] if isinstance(t, datetime)]
             if dates:
                 start_val = dates[0].isoformat()
-                if len(dates) > 1 and (dates[1] - dates[0]).days < 15:
-                    end_val = dates[1].isoformat()
-                else:
-                    end_val = None
+                end_val = dates[-1].isoformat() if len(dates) > 1 else None
         except Exception:
             pass
 
