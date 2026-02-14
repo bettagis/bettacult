@@ -85,22 +85,30 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     start_val = raw.get("startDate") or raw.get("start") or (raw.get("raw", {}).get("startDate") if isinstance(raw.get("raw"), dict) else None)
     end_val = raw.get("endDate") or raw.get("end") or (raw.get("raw", {}).get("endDate") if isinstance(raw.get("raw"), dict) else None)
 
-    if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
+    # Garantisci che esistano comunque
+    if start_val is None:
+        start_val = None
+    if end_val is None:
+        end_val = None
+
+    if (not start_val or not isinstance(start_val, str) or len(start_val) < 8):
         desc = raw.get("description", "")
         if not desc and isinstance(raw.get("raw"), dict):
             desc = raw["raw"].get("description", "")
-        from utils_date_parsing import extract_dates_from_desc
+
         try:
+            from utils_date_parsing import extract_dates_from_desc
             dates = extract_dates_from_desc(desc)
         except Exception:
             dates = []
+
         if dates:
             start_val = dates[0].isoformat()
             end_val = dates[-1].isoformat() if len(dates) > 1 else None
         else:
             # Fallback legacy: usa ancora dateparser solo se la funzione custom non trova nulla
-            from dateparser.search import search_dates
             try:
+                from dateparser.search import search_dates
                 found = search_dates(desc, languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
                 dates = [t for (_, t) in found or [] if isinstance(t, datetime)]
                 if dates:
@@ -157,7 +165,7 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "source": source_url,
         "raw": raw
     }
-
+    
 def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     all_events = []
