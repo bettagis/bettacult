@@ -1,3 +1,7 @@
-https://www.teatrodiroma.net/calendario/
-https://www.auditorium.com/it/eventi/
-https://www.casadeljazz.com/eventi/
+https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/
+https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-india/
+https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-torlonia/
+
+# Altre url
+# Auditorium: [URL dell'Auditorium]
+# Casa del Jazz: [URL della Casa del Jazz]
