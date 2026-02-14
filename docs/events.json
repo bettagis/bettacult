@@ -335,16 +335,16 @@
       "raw": {
         "name": "Jazz Campus Orchestra",
         "description": "",
-        "startDate": "2040-02-14T05:50:41.925435",
+        "startDate": "2040-02-14T21:09:07.431197",
         "endDate": "2023-06-09T21:00:00",
         "url": "https://www.casadeljazz.com/orchestra-residente/jazz-campus-orchestra/"
       }
     },
     {
-      "id": "7fca5a6e-437d-5af3-9341-72f1f0a263c1",
+      "id": "9ad67c16-ee4f-5207-8b71-8a8aae6ba983",
       "title": "Upcoming events",
-      "start": "2026-09-05T19:30:00",
-      "end": "2026-02-08T18:00:00",
+      "start": "2026-10-05T19:30:00",
+      "end": "2026-03-08T18:00:00",
       "description": "",
       "location": {
         "name": null,
@@ -355,8 +355,8 @@
       "raw": {
         "name": "Upcoming events",
         "description": "",
-        "startDate": "2026-05-09T19:30:00",
-        "endDate": "2026-08-02T18:00:00",
+        "startDate": "2026-05-10T19:30:00",
+        "endDate": "2026-08-03T18:00:00",
         "url": "https://www.casadeljazz.com/en/events/"
       }
     },
@@ -394,7 +394,7 @@
       "raw": {
         "name": "Andrea Molinari “Awakening - Il tutto nel nulla”",
         "description": "",
-        "startDate": "2026-02-14T05:50:44.558420",
+        "startDate": "2026-02-14T21:09:08.700947",
         "endDate": "2026-02-14T19:30:00",
         "url": "https://www.casadeljazz.com/evento/andrea-molinari-awakening-il-tutto-nel-nulla/"
       }
