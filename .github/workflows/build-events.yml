@@ -28,6 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scraper/requirements.txt
 
+      - name: Clean output files
+        run: |
+          rm -f site/events.json site/events.ics docs/events.json docs/events.ics
+
       - name: Run scraper
         run: |
           python scraper/unified_events.py --urls-file scraper/urls.txt -j site/events.json -c site/events.ics
