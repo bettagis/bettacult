@@ -1,6 +1,6 @@
 from typing import Dict, Any, Optional
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil import parser as dateutil_parser
 
 
@@ -15,7 +15,6 @@ def parse_date_to_dt(date_str: Optional[str]) -> Optional[datetime]:
 
 
 def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
-    from datetime import datetime, timedelta
     title = raw.get("name") or raw.get("headline") or ""
     now = datetime.now()
     # Fallbacks: get start and end from common keys or from raw.dict
