@@ -32,6 +32,12 @@ jobs:
         run: |
           python scraper/unified_events.py --urls-file scraper/urls.txt -j site/events.json -c site/events.ics
 
+      - name: Copia risultati in docs/
+        run: |
+          mkdir -p docs
+          cp site/events.json docs/events.json
+          cp site/events.ics docs/events.ics
+
       - name: Show git status (debug)
         run: |
           git status --porcelain
@@ -45,10 +51,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add site/events.json site/events.ics || true
+          git add site/events.json site/events.ics docs/events.json docs/events.ics || true
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore(events): update generated events"
-            # push usando token per l'autenticazione
             git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
           else
             echo "No changes to commit"
