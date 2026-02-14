@@ -97,6 +97,7 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
                     end_val = None
         except Exception:
             pass
+
     start_dt = parse_date_to_dt(start_val)
     end_dt = parse_date_to_dt(end_val)
     if start_dt and start_dt.year > 2100:
@@ -135,8 +136,6 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "title": title,
         "start": start_dt.isoformat() if start_dt else None,
         "end": end_dt.isoformat() if end_dt else None,
-        "start_dt": start_dt,
-        "end_dt": end_dt,
         "description": description,
         "location": location,
         "url": url,
