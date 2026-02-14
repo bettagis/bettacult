@@ -89,15 +89,16 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         desc = raw.get("description", "")
         if not desc and isinstance(raw.get("raw"), dict):
             desc = raw["raw"].get("description", "")
-   
-       # Prova con la funzione custom
         from utils_date_parsing import extract_dates_from_desc
-        dates = extract_dates_from_desc(desc)
+        try:
+            dates = extract_dates_from_desc(desc)
+        except Exception:
+            dates = []
         if dates:
             start_val = dates[0].isoformat()
             end_val = dates[-1].isoformat() if len(dates) > 1 else None
         else:
-        # Fallback legacy: usa ancora dateparser solo se la funzione custom non trova nulla
+            # Fallback legacy: usa ancora dateparser solo se la funzione custom non trova nulla
             from dateparser.search import search_dates
             try:
                 found = search_dates(desc, languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
@@ -105,8 +106,12 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
                 if dates:
                     start_val = dates[0].isoformat()
                     end_val = dates[-1].isoformat() if len(dates) > 1 else None
+                else:
+                    start_val = None
+                    end_val = None
             except Exception:
-                pass
+                start_val = None
+                end_val = None
 
     start_dt = parse_date_to_dt(start_val)
     end_dt = parse_date_to_dt(end_val)
