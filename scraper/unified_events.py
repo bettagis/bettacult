@@ -43,6 +43,19 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
 
     start_dt = parse_date_to_dt(start_val)
     end_dt = parse_date_to_dt(end_val)
+    
+    # Validate dates: set to None if year > 2100 (impossible future events)
+    if start_dt and start_dt.year > 2100:
+        start_dt = None
+    if end_dt and end_dt.year > 2100:
+        end_dt = None
+    
+    # Validate end_dt: set to None if difference is negative or exceeds 15 days
+    if start_dt and end_dt:
+        date_diff = (end_dt - start_dt).days
+        if date_diff < 0 or date_diff > 15:
+            end_dt = None
+    
     description = raw.get("description") or ""
     url = raw.get("url") or raw.get("sameAs") or raw.get("mainEntityOfPage") or raw.get("@id") or source_url
     location_raw = raw.get("location") or {}
