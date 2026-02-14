@@ -19,14 +19,14 @@
     async function loadEvents() {
       const res = await fetch("events.json", { cache: 'no-store' });
       const data = await res.json();
-      return data.map(e => ({
-        id: e.id,
-        title: `${e.title} — ${e.source}`,
-        start: e.start,
-        end: e.end,
-        url: e.url
-      }));
-    }
+      return (data.events || []).map(e => ({
+    id: e.id,
+    title: `${e.title} — ${e.source}`,
+    start: e.start,
+    end: e.end,
+    url: e.url
+  }));
+}
 
     document.addEventListener('DOMContentLoaded', async function () {
       const calendarEl = document.getElementById('calendar');
