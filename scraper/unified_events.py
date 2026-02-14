@@ -87,7 +87,7 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
             desc = raw["raw"].get("description", "")
    
        # Prova con la funzione custom
-        from scraper.utils_date_parsing import extract_dates_from_desc
+        from utils_date_parsing import extract_dates_from_desc
         dates = extract_dates_from_desc(desc)
         if dates:
             start_val = dates[0].isoformat()
