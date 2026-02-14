@@ -81,7 +81,7 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     start_val = raw.get("startDate") or raw.get("start") or (raw.get("raw", {}).get("startDate") if isinstance(raw.get("raw"), dict) else None)
     end_val = raw.get("endDate") or raw.get("end") or (raw.get("raw", {}).get("endDate") if isinstance(raw.get("raw"), dict) else None)
 
-   if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
+    if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
     desc = raw.get("description", "")
     if not desc and isinstance(raw.get("raw"), dict):
         desc = raw["raw"].get("description", "")
