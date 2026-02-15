@@ -1,7 +1,6 @@
 import sys
 import os
 sys.path.append(os.path.dirname(__file__))
-import os
 import re
 import json
 import requests
@@ -9,9 +8,9 @@ from bs4 import BeautifulSoup
 from typing import List, Dict, Any, Optional
 from urllib.parse import urljoin
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime
 from dateutil import parser as dateutil_parser
-
+from collections import Counter
 
 # Config
 URLS_FILE = "scraper/urls.txt"
@@ -81,32 +80,23 @@ def parse_date_to_dt(date_str: Optional[str]) -> Optional[datetime]:
 
 def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
     title = raw.get("name") or raw.get("headline") or ""
-    now = datetime.now()
     start_val = raw.get("startDate") or raw.get("start") or (raw.get("raw", {}).get("startDate") if isinstance(raw.get("raw"), dict) else None)
     end_val = raw.get("endDate") or raw.get("end") or (raw.get("raw", {}).get("endDate") if isinstance(raw.get("raw"), dict) else None)
 
-    # Garantisci che esistano comunque
-    if start_val is None:
-        start_val = None
-    if end_val is None:
-        end_val = None
-
-    if (not start_val or not isinstance(start_val, str) or len(start_val) < 8):
+    # Fallback su descrizione
+    if not start_val or not isinstance(start_val, str) or len(start_val) < 8:
         desc = raw.get("description", "")
         if not desc and isinstance(raw.get("raw"), dict):
             desc = raw["raw"].get("description", "")
-
         try:
             from utils_date_parsing import extract_dates_from_desc
             dates = extract_dates_from_desc(desc)
         except Exception:
             dates = []
-
         if dates:
             start_val = dates[0].isoformat()
             end_val = dates[-1].isoformat() if len(dates) > 1 else None
         else:
-            # Fallback legacy: usa ancora dateparser solo se la funzione custom non trova nulla
             try:
                 from dateparser.search import search_dates
                 found = search_dates(desc, languages=['it'], settings={'PREFER_DATES_FROM': 'future'})
@@ -131,6 +121,7 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         date_diff = (end_dt - start_dt).days
         if date_diff < 0 or date_diff > 15:
             end_dt = None
+
     description = raw.get("description") or ""
     url = raw.get("url") or raw.get("sameAs") or raw.get("mainEntityOfPage") or raw.get("@id") or source_url
     location_raw = raw.get("location") or {}
@@ -165,7 +156,18 @@ def normalize_event(raw: Dict[str, Any], source_url: str) -> Dict[str, Any]:
         "source": source_url,
         "raw": raw
     }
-    
+
+def deduplicate_events(events):
+    seen = set()
+    unique = []
+    for ev in events:
+        key = (ev['title'].strip().lower(), ev['start'], ev['url'])
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(ev)
+    return unique
+
 def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     all_events = []
@@ -194,9 +196,15 @@ def main():
         except Exception as ex:
             print(f"[ERROR] Parse fallita per {url}: {ex}")
 
+    deduped_events = deduplicate_events(all_events)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(all_events, f, ensure_ascii=False, indent=2)
-    print(f"Salvati {len(all_events)} eventi totali in {OUTPUT_PATH}")
+        json.dump(deduped_events, f, ensure_ascii=False, indent=2)
+    # Report per fonte
+    source_count = Counter(ev.get("source", "") for ev in deduped_events)
+    print("[INFO] Eventi per source:")
+    for src, count in source_count.items():
+        print(f"- {src}: {count} eventi")
+    print(f"Salvati {len(deduped_events)} eventi (deduplicati) totali in {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()
