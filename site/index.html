@@ -17,7 +17,7 @@
 
   <script>
     async function loadEvents() {
-      const res = await fetch('../events.json', { cache: 'no-store' });
+      const res = await fetch('./events.json', { cache: 'no-store' });
       const data = await res.json();
       return (data.events || []).map(e => ({
         id: e.id,
