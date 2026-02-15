@@ -14,22 +14,37 @@
 </head>
 <body>
   <div id="calendar"></div>
-
   <script>
     async function loadEvents() {
+      // Path relativo: events.json deve stare nella stessa cartella di index.html (docs/)
       const res = await fetch("./events.json", { cache: 'no-store' });
+      if (!res.ok) {
+        console.error("Impossibile caricare events.json:", res.status);
+        return [];
+      }
       const data = await res.json();
-     return (data.events || []).map(e => ({
-  id: e.id,
-  title: `${e.title} — ${e.source}`,
-  start: e.start || (e.raw && e.raw.startDate) || "",
-  end: e.end || (e.raw && e.raw.endDate) || "",
-  url: e.url
-}));
-}
+
+      // accetta sia array che oggetto con .events
+      const eventsArray = Array.isArray(data) ? data : (data.events || []);
+      if (!Array.isArray(eventsArray)) {
+        console.error("Formato events.json non valido:", data);
+        return [];
+      }
+
+      // Mappa dati per FullCalendar
+      return eventsArray.map(e => ({
+        id: e.id,
+        title: e.title ? `${e.title}${e.source ? ' — ' + e.source : ''}` : "",
+        start: e.start,
+        end: e.end,
+        url: e.url
+      })).filter(ev => ev.title && ev.start); // solo eventi validi
+    }
 
     document.addEventListener('DOMContentLoaded', async function () {
       const calendarEl = document.getElementById('calendar');
+      let events = await loadEvents();
+
       const calendar = new FullCalendar.Calendar(calendarEl, {
         locale: 'it',
         initialView: window.matchMedia("(max-width: 640px)").matches ? 'listWeek' : 'dayGridMonth',
@@ -39,7 +54,7 @@
           center: 'title',
           right: 'dayGridMonth,listWeek'
         },
-        events: await loadEvents(),
+        events: events,
         eventClick: function(info) {
           if (info.event.url) {
             info.jsEvent.preventDefault();
